@@ -10,7 +10,7 @@
         <meta name="author" content="Zoyothemes"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        @include('backend.layouts.css')
+        @yield('css')
 
     </head>
 
@@ -56,7 +56,7 @@
         </div>
         <!-- END wrapper -->
 
-        @include('backend.layouts.js')
+        @yield('js')
 
     </body>
 </html>
