@@ -73,9 +73,9 @@
         <div class="card">
             <div class="card-header">
                 <h5 class="card-title mb-0" style="color:black">All CarList</h5>
-                <a class="btn btn-warning" href="{{ route('carlist.create') }}"> Create New Post</a>
+                <a class="btn btn-warning mt-2" href="{{ route('carlist.create') }}"> Create New Post</a>
                 @if (session('msg'))
-                    <div class="alert alert-success">{{ session('msg') }}</div>
+                    <div class="alert alert-success mt-2">{{ session('msg') }}</div>
                         @endif
             </div><!-- end card header -->
 
