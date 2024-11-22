@@ -34,6 +34,6 @@ class DatabaseSeeder extends Seeder
         //     'password' => Hash::make('admin123'),
         // ]);
 
-        \App\Models\CarList::factory(20)->create();
+        \App\Models\Carlist::factory(20)->create();
     }
 }

@@ -69,10 +69,14 @@
 
 
 <div class="row">
-    <div class="col-12">
+    <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0">All CarList</h5>
+                <h5 class="card-title mb-0" style="color:black">All CarList</h5>
+                <a class="btn btn-warning" href="{{ route('carlist.create') }}"> Create New Post</a>
+                @if (session('msg'))
+                    <div class="alert alert-success">{{ session('msg') }}</div>
+                        @endif
             </div><!-- end card header -->
 
             <div class="card-body">
@@ -86,20 +90,32 @@
                             <th>Price</th>
                             <th>Image</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th style="width: 230px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($items as $item)
                         <tr>
-                            <td>{{$item->id}}</td>
+                            <td>{{$loop->iteration}}</td>
                             <td>{{$item->brand}}</td>
                             <td>{{$item->model}}</td>
                             <td>{{$item->engine}}</td>
                             <td>{{$item->price_per_day}}</td>
                             <td>{{$item->image}}</td>
                             <td>{{$item->status}}</td>
-                            <td>Edit | Delete</td>
+                            <td>
+                                
+                                <form action="{{route('carlist.destroy', $item->id)}}"
+                                    method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <a class="btn btn-primary"
+                                        href="{{ route('carlist.edit', $item->id) }}">Edit</a>
+
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    
+                                </form>
+                            </td>
 
                         </tr>
                         @endforeach

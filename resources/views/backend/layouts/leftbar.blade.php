@@ -41,7 +41,7 @@
                 <li>
                     <a href="#sidebarAuth" data-bs-toggle="collapse">
                         <i data-feather="users"></i>
-                        <span> CarList </span>
+                        <span>CarList </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarAuth">
@@ -50,7 +50,7 @@
                                 <a href="{{route('carlist.index')}}" class="tp-link">All CarList</a>
                             </li>
                             <li>
-                                <a href="auth-register.html" class="tp-link">New Car</a>
+                                <a href="{{route('carlist.create')}}" class="tp-link">New Car</a>
                             </li>
                             
                         </ul>
