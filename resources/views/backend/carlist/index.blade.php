@@ -111,6 +111,8 @@
                                     @method('DELETE')
                                     <a class="btn btn-primary"
                                         href="{{ route('carlist.edit', $item->id) }}">Edit</a>
+                                        <a class="btn btn-success"
+                                        href="{{ route('carlist.show', $item->id) }}">View</a>
 
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                     

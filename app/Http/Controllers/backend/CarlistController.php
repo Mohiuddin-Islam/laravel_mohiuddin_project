@@ -49,7 +49,7 @@ class CarlistController extends Controller
      */
     public function show(Carlist $carlist)
     {
-        //
+        return view('backend.carlist.show',compact("carlist"));
     }
 
     /**
