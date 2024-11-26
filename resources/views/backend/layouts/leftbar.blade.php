@@ -36,7 +36,7 @@
                     
                 </li>
 
-                <li class="menu-title">Pages</li>
+                <li class="menu-title">Car Category</li>
 
                 <li>
                     <a href="#sidebarAuth" data-bs-toggle="collapse">
@@ -51,6 +51,27 @@
                             </li>
                             <li>
                                 <a href="{{route('carlist.create')}}" class="tp-link">New Car</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-title">Driver Manage</li>
+
+                <li>
+                    <a href="#driv" data-bs-toggle="collapse">
+                        <i data-feather="users"></i>
+                        <span>Driver </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="driv">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{route('driver.index')}}" class="tp-link">All Driver List</a>
+                            </li>
+                            <li>
+                                <a href="{{route('driver.create')}}" class="tp-link">New Driver</a>
                             </li>
                             
                         </ul>

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
 
         // \App\Models\Admin::create([
-        //     'name' => 'Test User',
+        //     'name' => 'Mohiuddin',
         //     'email' => 'admin@gmail.com',
         //     'password' => Hash::make('admin123'),
         // ]);

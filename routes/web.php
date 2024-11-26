@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\CarlistController;
+use App\Http\Controllers\backend\DriverlistController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +54,7 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
     Route::view('/admin/dashboard','backend.admin_dashboard');
     Route::resource('/carlist', CarlistController::class);
+    Route::resource('/driver', DriverlistController::class);
 
 });
 

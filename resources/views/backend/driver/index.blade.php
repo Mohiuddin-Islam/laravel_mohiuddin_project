@@ -72,8 +72,8 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0" style="color:black">All CarList</h5>
-                <a class="btn btn-warning mt-2" href="{{ route('carlist.create') }}"> Create New Post</a>
+                <h5 class="card-title mb-0" style="color:black">All DriverList</h5>
+                <a class="btn btn-warning mt-2" href="{{ route('driver.create') }}"> Create New Driver</a>
                 @if (session('msg'))
                     <div class="alert alert-success mt-2">{{ session('msg') }}</div>
                         @endif
@@ -84,12 +84,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Brand</th>
-                            <th>Model</th>
-                            <th>Engine</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Status</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Details</th>
                             <th style="width: 230px">Action</th>
                         </tr>
                     </thead>
@@ -97,23 +95,21 @@
                         @foreach($items as $item)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$item->brand}}</td>
-                            <td>{{$item->model}}</td>
-                            <td>{{$item->engine}}</td>
-                            <td>{{$item->price_per_day}}</td>
-                            <td><img src="{{ asset('images/' . $item->image) }}" width="100px"></td>
-                            {{-- <td>{{$item->image}}</td> --}}
-                            <td>{{$item->status}}</td>
+                            <td>{{$item->name}}</td>
+                            <td>{{$item->email}}</td>
+                            <td>{{$item->phone}}</td>
+                            <td>{{$item->details}}</td>
+                            
                             <td>
                                 
-                                <form action="{{route('carlist.destroy', $item->id)}}"
+                                <form action="{{route('driver.destroy', $item->id)}}"
                                     method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <a class="btn btn-primary"
-                                        href="{{ route('carlist.edit', $item->id) }}">Edit</a>
+                                        href="{{ route('driver.edit', $item->id) }}">Edit</a>
                                         <a class="btn btn-success"
-                                        href="{{ route('carlist.show', $item->id) }}">View</a>
+                                        href="{{ route('driver.show', $item->id) }}">View</a>
 
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                     

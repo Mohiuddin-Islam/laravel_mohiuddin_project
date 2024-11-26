@@ -12,4 +12,8 @@ class Carlist extends Model
     protected $fillable = [
         'brand', 'model', 'engine','price_per_day','image','status'
     ];
+
+    public function driver(){
+        return $this->hasMany(Driver::class);
+    }
 }

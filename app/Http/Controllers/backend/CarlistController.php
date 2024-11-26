@@ -30,6 +30,25 @@ class CarlistController extends Controller
      */
     public function store(Request $request)
     {
+
+        // $request->validate([
+        //     'brand' => 'required|string|max:255',
+        //     'model' => 'required|string|max:255',
+        //     'engine' => 'required|string|max:255',
+        //     'price_per_day' => 'required|numeric',
+        //     'image' =>'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+        //     'status'=>'required',
+        // ]);
+
+        // if ($image = $request->file('image')) {
+        //     $destinationPath = 'images/';
+        //     $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+        //     $image->move($destinationPath, $postImage);
+        //     $photo = $destinationPath.$postImage;
+        // }else{
+        //     $photo = 'images/nophoto.png';
+        // }
+        
         $carlist = new Carlist;
 
         $carlist->brand = $request->brand;
@@ -40,9 +59,10 @@ class CarlistController extends Controller
         $carlist->status = $request->status;
 
         $carlist->save();
-        return redirect()->route('carlist.index')->with('msg', "Create Successfully");
-    
+        return redirect()->route('carlist.index')->with('msg', "Create Car Successfully");
+
     }
+    
 
     /**
      * Display the specified resource.
