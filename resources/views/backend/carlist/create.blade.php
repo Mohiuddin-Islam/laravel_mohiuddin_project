@@ -79,7 +79,7 @@
                             <label class="form-check-label" for="checkmeout0">Check me out !</label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>
             </div>
         </div>
