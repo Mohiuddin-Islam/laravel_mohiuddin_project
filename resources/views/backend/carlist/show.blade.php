@@ -28,7 +28,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-12 margin-tb ">
             <div class="pull-left">
                 <h2>Car Details</h2>
             </div>
@@ -37,40 +37,40 @@
             </div>
         </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center">
+        <div class="form-group">
+            {{-- <strong>Image:</strong> --}}
+            <img src="{{ asset($carlist->image) }}" width="500px">
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-2">
             <div class="form-group">
                 <strong>Brand:</strong>
                 {{ $carlist->brand }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Model:</strong>
                 {{ $carlist->model }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Engine:</strong>
                 {{ $carlist->engine }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Price:</strong>
                 {{ $carlist->price_per_day }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Image:</strong>
-                <img src="{{ asset('images/' . $carlist->image) }}" width="200px">;
-                {{-- <img src="/images/{{ $carlist->image }}" width="200px"> --}}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Status:</strong>
                 {{ $carlist->status }}

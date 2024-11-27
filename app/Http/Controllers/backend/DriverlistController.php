@@ -80,6 +80,6 @@ class DriverlistController extends Controller
     {
         $driver->delete();
 
-        return redirect()->route('driver.index')->with('msg', 'Deleted Successfully');
+        return redirect()->route('driver.index')->with('msg', 'Driver Deleted Successfully');
     }
 }

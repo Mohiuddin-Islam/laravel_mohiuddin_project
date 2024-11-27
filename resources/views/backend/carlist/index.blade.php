@@ -101,7 +101,7 @@
                             <td>{{$item->model}}</td>
                             <td>{{$item->engine}}</td>
                             <td>{{$item->price_per_day}}</td>
-                            <td><img src="{{ asset('images/' . $item->image) }}" width="100px"></td>
+                            <td><img src="{{ asset($item->image) }}" width="100px"></td>
                             {{-- <td>{{$item->image}}</td> --}}
                             <td>{{$item->status}}</td>
                             <td>

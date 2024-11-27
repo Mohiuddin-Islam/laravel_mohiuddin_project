@@ -31,45 +31,44 @@ class CarlistController extends Controller
     public function store(Request $request)
     {
 
-        // $request->validate([
-        //     'brand' => 'required|string|max:255',
-        //     'model' => 'required|string|max:255',
-        //     'engine' => 'required|string|max:255',
-        //     'price_per_day' => 'required|numeric',
-        //     'image' =>'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-        //     'status'=>'required',
-        // ]);
+        $request->validate([
+            'brand' => 'required|max:255',
+            'model' => 'required|max:255',
+            'engine' => 'required|max:255',
+            'price' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status' => 'required',
+        ]);
 
-        // if ($image = $request->file('image')) {
-        //     $destinationPath = 'images/';
-        //     $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        //     $image->move($destinationPath, $postImage);
-        //     $photo = $destinationPath.$postImage;
-        // }else{
-        //     $photo = 'images/nophoto.png';
-        // }
-        
-        $carlist = new Carlist;
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $postImage);
+            $photo = $destinationPath . $postImage;
+        } else {
+            $photo = 'images/nophoto.png';
+        }
+
+        $carlist = new Carlist();
 
         $carlist->brand = $request->brand;
         $carlist->model = $request->model;
         $carlist->engine = $request->engine;
         $carlist->price_per_day = $request->price;
-        $carlist->image = $request->image;
+        $carlist->image = $photo;
         $carlist->status = $request->status;
-
         $carlist->save();
-        return redirect()->route('carlist.index')->with('msg', "Create Car Successfully");
 
+        return redirect()->route('carlist.index')->with('msg', "Create Car Successfully");
     }
-    
+
 
     /**
      * Display the specified resource.
      */
     public function show(Carlist $carlist)
     {
-        return view('backend.carlist.show',compact("carlist"));
+        return view('backend.carlist.show', compact("carlist"));
     }
 
     /**
@@ -77,7 +76,7 @@ class CarlistController extends Controller
      */
     public function edit(Carlist $carlist)
     {
-        return view('backend.carlist.edit',compact('carlist'));
+        return view('backend.carlist.edit', compact('carlist'));
     }
 
     /**
@@ -85,11 +84,30 @@ class CarlistController extends Controller
      */
     public function update(Request $request, Carlist $carlist)
     {
+
+        $request->validate([
+            'brand' => 'required|max:255',
+            'model' => 'required|max:255',
+            'engine' => 'required|max:255',
+            'price' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status' => 'required',
+        ]);
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $postImage);
+            $photo = $destinationPath . $postImage;
+        } else {
+            $photo = 'images/nophoto.png';
+        }
+
         $carlist->brand = $request->brand;
         $carlist->model = $request->model;
         $carlist->engine = $request->engine;
         $carlist->price_per_day = $request->price;
-        $carlist->image = $request->image;
+        $carlist->image = $photo;
         $carlist->status = $request->status;
 
         $carlist->update();

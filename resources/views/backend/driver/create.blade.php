@@ -62,12 +62,6 @@
                         
                     </div>
                     
-                    <div class=" mb-3">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="checkmeout0">
-                            <label class="form-check-label" for="checkmeout0">Check me out !</label>
-                        </div>
-                    </div>
                     <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>
             </div>

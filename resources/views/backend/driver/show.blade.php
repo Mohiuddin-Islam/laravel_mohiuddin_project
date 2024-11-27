@@ -39,25 +39,25 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Name:</strong>
                 {{ $driver->name }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Email:</strong>
                 {{ $driver->email }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Phone:</strong>
                 {{ $driver->phone}}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Details:</strong>
                 {{ $driver->details }}

@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 26, 2024 at 10:03 PM
+-- Host: 127.0.0.1:3310
+-- Generation Time: Nov 27, 2024 at 08:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -67,18 +67,19 @@ CREATE TABLE `carlists` (
 --
 
 INSERT INTO `carlists` (`id`, `brand`, `model`, `engine`, `price_per_day`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(21, 'Toyota', 'Land Cruiser', '3600hz', 8500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(22, 'Audi', 'R-8', '3200hz', 7500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(23, 'Nissan', 'X-Trail', '2600hz', 5500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(24, 'Mitsubishi', 'X-Pander', '2800hz', 6500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(25, 'Suzuki', 'Axio', '3600hz', 7000.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(26, 'Honda', 'CV-R', '3600hz', 8500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(27, 'BMW', 'X-8', '3600hz', 10500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(28, 'Tesla', 'Azire', '2300hz', 4500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(29, 'Marcedez', 'Benz-Class', '4000hz', 12000.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(30, 'Toyota', 'Hybrid', '3600hz', 6500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(31, 'Tata', 'Harrier', '2700hz', 5500.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12'),
-(32, 'Ford', 'XL', '2700hz', 4000.00, NULL, 'available', '2024-11-26 20:51:12', '2024-11-26 20:51:12');
+(22, 'Audi', 'R-8', '3200hz', 7500.00, 'images/20241127045740.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:57:40'),
+(23, 'Nissan', 'X-Trail', '2600hz', 5500.00, 'images/20241127045439.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:54:39'),
+(24, 'Mitsubishi', 'X-Pander', '2800hz', 6500.00, 'images/20241127045340.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:53:40'),
+(25, 'Suzuki', 'Axio', '3600hz', 7000.00, 'images/20241127045252.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:52:52'),
+(26, 'Honda', 'CV-R', '3600hz', 8500.00, 'images/20241127045132.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:51:32'),
+(27, 'BMW', 'X-8', '3600hz', 10500.00, 'images/20241127045025.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:50:25'),
+(28, 'Tesla', 'Azire', '2300hz', 4500.00, 'images/20241127044940.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:49:40'),
+(29, 'Marcedez', 'Benz-Class', '4000hz', 12000.00, 'images/20241127044838.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:48:38'),
+(30, 'Toyota', 'Hybrid', '3600hz', 6500.00, 'images/20241127044750.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:47:50'),
+(31, 'Tata', 'Harrier', '2700hz', 5500.00, 'images/20241127044525.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:45:25'),
+(32, 'Ford', 'XL', '2700hz', 4000.00, 'images/20241127044053.png', 'available', '2024-11-26 20:51:12', '2024-11-26 22:40:53'),
+(38, 'Toyota', 'Land Cruiser', '3200hz', 7500.00, 'images/20241127043345.png', 'available', '2024-11-26 22:25:23', '2024-11-26 22:33:45'),
+(39, 'Volga', 'Volga-2024', '2700hz', 6000.00, 'images/20241127050909.png', 'available', '2024-11-26 23:00:39', '2024-11-26 23:09:09');
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,8 @@ INSERT INTO `drivers` (`id`, `car_id`, `name`, `email`, `phone`, `details`, `cre
 (1, NULL, 'Rakib', 'rakib@gmail.com', '01567980553', 'Narayangong', '2024-11-26 14:25:37', '2024-11-26 14:37:54'),
 (2, NULL, 'Abdullah', 'asm@gmail.com', '01248522345', 'Khilgao', '2024-11-26 14:26:02', '2024-11-26 14:26:02'),
 (3, NULL, 'Habib', 'habib@gmail.com', '0163856320', 'Mirpur-1, College-Road', '2024-11-26 14:44:00', '2024-11-26 14:44:00'),
-(4, NULL, 'Jamil Hossain', 'jamil@gmail.com', '01638563202', 'Sajahanpur, Jamtola Mosque', '2024-11-26 14:47:06', '2024-11-26 14:47:34');
+(4, NULL, 'Jamil Hossain', 'jamil@gmail.com', '01638563202', 'Sajahanpur, Jamtola Mosque', '2024-11-26 14:47:06', '2024-11-26 14:47:34'),
+(5, NULL, 'Nazrul Islam', 'nazrul@gmail.com', '01789632556', 'Jatrabari', '2024-11-27 00:13:45', '2024-11-27 00:13:45');
 
 -- --------------------------------------------------------
 
@@ -302,7 +304,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `carlists`
 --
 ALTER TABLE `carlists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `clients`
@@ -314,7 +316,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
