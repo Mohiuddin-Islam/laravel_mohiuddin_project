@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\BookinglistController;
 use App\Http\Controllers\backend\CarlistController;
 use App\Http\Controllers\backend\DriverlistController;
 use App\Http\Controllers\ProfileController;
@@ -59,6 +60,7 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::view('/admin/dashboard','backend.admin_dashboard');
     Route::resource('/carlist', CarlistController::class);
     Route::resource('/driver', DriverlistController::class);
+    Route::resource('/booking', BookinglistController::class);
 
 });
 

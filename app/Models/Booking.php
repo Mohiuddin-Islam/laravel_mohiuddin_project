@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-Driverlist
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-
-class Driverlist extends Authenticatable
+class Booking extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,13 +19,14 @@ class Driverlist extends Authenticatable
      * @var array<int, string>
      */
 
-    protected $guard = 'doctor';
+    protected $guard = 'booking';
 
     protected $fillable = [
         'name',
         'email',
-        'password',
-        'specialist_id',
+        'phone',
+        'details',
+        'car_id',
     ];
 
     /**
@@ -45,9 +48,13 @@ class Driverlist extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function specialist(){
-        return $this->BelongsTo(Specialist::class);
+    public function carlist(){
+        return $this->BelongsTo(Carlist::class);
+    }
+
+    public function booking(){
+        return $this->BelongsTo(Booking::class);
     }
 
 }
- 
+

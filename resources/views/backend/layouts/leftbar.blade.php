@@ -78,6 +78,27 @@
                     </div>
                 </li>
 
+                <li class="menu-title">Booking Manage</li>
+
+                <li>
+                    <a href="#book1" data-bs-toggle="collapse">
+                        <i data-feather="users"></i>
+                        <span>Booking </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="book1">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{route('booking.index')}}" class="tp-link">All Booking List</a>
+                            </li>
+                            <li>
+                                <a href="{{route('booking.create')}}" class="tp-link">New Booking</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
 
         </div>

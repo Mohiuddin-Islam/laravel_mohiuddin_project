@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Carlist extends Model
+
+class CarList extends Model
 {
     use HasFactory;
 
@@ -15,5 +16,9 @@ class Carlist extends Model
 
     public function driver(){
         return $this->hasMany(Driver::class);
+    }
+
+    public function booking(){
+        return $this->hasMany(Booking::class);
     }
 }

@@ -111,7 +111,7 @@ class CarlistController extends Controller
         $carlist->status = $request->status;
 
         $carlist->update();
-        return redirect()->route('carlist.index')->with('msg', 'Update Successfully');
+        return redirect()->route('carlist.index')->with('msg', 'Update Car Successfully');
     }
 
     /**
@@ -121,6 +121,6 @@ class CarlistController extends Controller
     {
         $carlist->delete();
 
-        return redirect()->route('carlist.index')->with('msg', 'Deleted Successfully');
+        return redirect()->route('carlist.index')->with('msg', 'Deleted Car Successfully');
     }
 }
