@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Nov 28, 2024 at 07:55 AM
+-- Generation Time: Nov 30, 2024 at 08:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Mohiuddin', 'admin@gmail.com', '$2y$10$cvFJKRqlDbLB7R.KBYfujunzg/K2YISKccr1WLsrLuF6IzB/LQVSC', NULL, '2024-11-26 14:11:28', '2024-11-26 14:11:28');
+(1, 'Mohiuddin', 'admin@gmail.com', '$2y$10$sh30aeDWaRy7AWwR/TRqz.LHQ367Wp4YPLNLLHpre7v.H0pjXznLm', NULL, '2024-11-30 01:20:06', '2024-11-30 01:20:06');
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE `bookings` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(30) NOT NULL,
-  `details` varchar(150) DEFAULT NULL,
+  `details` varchar(150) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -66,48 +66,35 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `car_id`, `name`, `email`, `phone`, `details`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Mohiuddin', 'mohiuddin@gmail.com', '017896325567', 'We Need Toyota Car Urgently!!', '2024-11-27 22:45:23', '2024-11-27 22:48:10'),
-(2, NULL, 'Saif Jahan', 'saif@gmail.com', '01789632556', 'Audi R-8 Book Now!!!', '2024-11-27 22:48:53', '2024-11-27 22:48:53'),
-(4, NULL, 'Rakib Hossain', 'rakib@gmail.com', '01789652344', 'Ford Car Book Now!!!', '2024-11-27 22:50:17', '2024-11-27 22:50:17'),
-(5, NULL, 'Nusrat Jahan', 'njs@gmail.com', '01789632556', 'Nissan X-Trail Book Now!!!!', '2024-11-27 23:00:17', '2024-11-27 23:00:17');
+(1, NULL, 'Mohiuddin', 'mohiuddin@gmail.com', '01789632556', 'Toyota Car Booked Now!!!', '2024-11-30 01:29:29', '2024-11-30 01:29:45'),
+(2, NULL, 'Saif Jahan', 'saif@gmail.com', '0178963255', 'Ford Car Booked Now!!!', '2024-11-30 01:32:47', '2024-11-30 01:32:47');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carlists`
+-- Table structure for table `car_lists`
 --
 
-CREATE TABLE `carlists` (
+CREATE TABLE `car_lists` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `brand` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
   `engine` varchar(255) NOT NULL,
-  `price_per_day` decimal(8,2) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `status` enum('available','unavailable') DEFAULT NULL,
+  `price_per_day` decimal(8,2) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `carlists`
+-- Dumping data for table `car_lists`
 --
 
-INSERT INTO `carlists` (`id`, `brand`, `model`, `engine`, `price_per_day`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(21, 'Toyota', 'Land Cruiser', '3600hz', 8500.00, 'images/20241128025607.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:56:07'),
-(22, 'Audi', 'R-8', '3200hz', 7500.00, 'images/20241128025547.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:55:47'),
-(23, 'Nissan', 'X-Trail', '2600hz', 5500.00, 'images/20241128025513.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:55:13'),
-(24, 'Mitsubishi', 'X-Pander', '2800hz', 6500.00, 'images/20241128025502.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:55:02'),
-(25, 'Suzuki', 'Axio', '3600hz', 7000.00, 'images/20241128025447.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:54:47'),
-(26, 'Honda', 'CV-R', '3600hz', 8500.00, 'images/20241128025434.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:54:34'),
-(27, 'BMW', 'X-8', '3600hz', 10500.00, 'images/20241128025415.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:54:15'),
-(28, 'Tesla', 'Azire', '2300hz', 4500.00, 'images/20241128025404.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:54:04'),
-(29, 'Marcedez', 'Benz-Class', '4000hz', 12000.00, 'images/20241128025352.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:53:52'),
-(30, 'Toyota', 'Hybrid', '3600hz', 6500.00, 'images/20241128025339.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:53:39'),
-(31, 'Tata', 'Harrier', '2700hz', 5500.00, 'images/20241128025330.jpg', 'available', '2024-11-26 20:51:12', '2024-11-27 20:53:30'),
-(32, 'Ford', 'XL', '2700hz', 4000.00, 'images/20241128025320.png', 'available', '2024-11-26 20:51:12', '2024-11-27 20:53:20'),
-(33, 'Subaru', 'Legacy', '3200hz', 4500.00, 'images/20241128040317.png', 'available', '2024-11-27 20:53:01', '2024-11-27 22:03:17'),
-(34, 'Volga', 'XL-4', '3200hz', 5500.00, 'images/20241128040400.png', 'available', '2024-11-27 22:04:00', '2024-11-27 22:04:00');
+INSERT INTO `car_lists` (`id`, `brand`, `model`, `engine`, `price_per_day`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(20, 'Audi', 'R-8', 'eum minus nihil', 774.92, 'images/20241130072349.png', 'Available', '2024-11-30 01:20:23', '2024-11-30 01:23:49'),
+(21, 'Toyota', 'Land Cruiser', '2700hz', 5000.00, 'images/20241130072446.png', 'Available', '2024-11-30 01:24:46', '2024-11-30 01:24:46'),
+(22, 'Ford', 'Axio', '3600hz', 4500.00, 'images/20241130073110.png', 'Available', '2024-11-30 01:31:10', '2024-11-30 01:31:10');
 
 -- --------------------------------------------------------
 
@@ -122,7 +109,7 @@ CREATE TABLE `clients` (
   `password` varchar(255) NOT NULL,
   `photo` varchar(255) DEFAULT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL,
+  `status` enum('active','inactive') DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -132,7 +119,7 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `name`, `email`, `password`, `photo`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Abdullah', 'asm@gmail.com', '$2y$10$pNmTJ4.PZHKGZh10lru8OO1ZeeaLeRJiDe6FLu6C1eJ/WOAvow4zG', NULL, NULL, 'active', '2024-11-26 14:11:57', '2024-11-26 14:11:57');
+(1, 'Abdullah', 'asm@gmail.com', '$2y$10$qwhakX3hj7Dt/5.2b4L3e.7RuFaRN9cbwuJU9PBPXkp/LtTW8WbMK', NULL, NULL, NULL, '2024-11-30 01:20:06', '2024-11-30 01:20:06');
 
 -- --------------------------------------------------------
 
@@ -156,11 +143,7 @@ CREATE TABLE `drivers` (
 --
 
 INSERT INTO `drivers` (`id`, `car_id`, `name`, `email`, `phone`, `details`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Rakib', 'rakib@gmail.com', '01567980553', 'Narayangong', '2024-11-26 14:25:37', '2024-11-26 14:37:54'),
-(2, NULL, 'Abdullah', 'asm@gmail.com', '01248522345', 'Khilgao', '2024-11-26 14:26:02', '2024-11-26 14:26:02'),
-(3, NULL, 'Habib', 'habib@gmail.com', '0163856320', 'Mirpur-1, College-Road', '2024-11-26 14:44:00', '2024-11-26 14:44:00'),
-(4, NULL, 'Jamil Hossain', 'jamil@gmail.com', '01638563202', 'Sajahanpur, Jamtola Mosque', '2024-11-26 14:47:06', '2024-11-26 14:47:34'),
-(5, NULL, 'Safin Ahmed', 'safin@gmail.com', '01789632556', 'Basabo, Dhaka', '2024-11-27 20:58:19', '2024-11-27 22:47:05');
+(1, NULL, 'Saif Jahan', 'saif@gmail.com', '01789632556', 'Siddiq Bazar,Gulisthan', '2024-11-30 01:28:01', '2024-11-30 01:28:30');
 
 -- --------------------------------------------------------
 
@@ -195,17 +178,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(7, '2024_11_20_131830_create_cars_table', 4),
-(8, '2024_11_20_131830_create_car_lists_table', 5),
-(33, '2014_10_12_000000_create_users_table', 6),
-(34, '2014_10_12_100000_create_password_reset_tokens_table', 6),
-(35, '2019_08_19_000000_create_failed_jobs_table', 6),
-(36, '2019_12_14_000001_create_personal_access_tokens_table', 6),
-(37, '2024_11_19_161352_create_admins_table', 6),
-(38, '2024_11_19_171833_create_clients_table', 6),
-(39, '2024_11_22_140606_create_carlists_table', 6),
-(40, '2024_11_26_181716_create_drivers_table', 6),
-(41, '2024_11_28_040917_create_bookings_table', 7);
+(71, '2014_10_12_000000_create_users_table', 1),
+(72, '2014_10_12_100000_create_password_reset_tokens_table', 1),
+(73, '2019_08_19_000000_create_failed_jobs_table', 1),
+(74, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(75, '2024_11_19_161352_create_admins_table', 1),
+(76, '2024_11_19_171833_create_clients_table', 1),
+(77, '2024_11_26_181716_create_drivers_table', 1),
+(78, '2024_11_28_040917_create_bookings_table', 1),
+(79, '2024_11_30_071405_create_car_lists_table', 1);
 
 -- --------------------------------------------------------
 
@@ -273,9 +254,9 @@ ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `carlists`
+-- Indexes for table `car_lists`
 --
-ALTER TABLE `carlists`
+ALTER TABLE `car_lists`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -339,13 +320,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `carlists`
+-- AUTO_INCREMENT for table `car_lists`
 --
-ALTER TABLE `carlists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+ALTER TABLE `car_lists`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `clients`
@@ -357,7 +338,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -369,7 +350,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
