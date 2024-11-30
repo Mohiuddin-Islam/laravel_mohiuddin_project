@@ -65,6 +65,7 @@
                     <div class="mb-3">
                         <label for="example-select" class="form-label">Status</label>
                         <select class="form-select" name="status" value="{{$carlist->status}}" id="example-select">
+                            <option>Select One</option>
                             <option>Available</option>
                             <option>Unavailable</option>
                             
@@ -74,12 +75,7 @@
                         <label for="formFile" class="form-label">Image</label>
                         <input class="form-control" name="image" value="{{$carlist->image}}" type="file" id="formFile">
                     </div>
-                    <div class=" mb-3">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="checkmeout0">
-                            <label class="form-check-label" for="checkmeout0">Check me out !</label>
-                        </div>
-                    </div>
+                    
                     <button type="submit" class="btn btn-primary">UPDATE</button>
                 </form>
             </div>

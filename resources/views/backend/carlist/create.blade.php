@@ -79,6 +79,7 @@
                         <div class="mb-3">
                             <label for="example-select" class="form-label">Status</label>
                             <select class="form-select" name="status" id="example-select">
+                                <option>Select One</option>
                                 <option>Available</option>
                                 <option>Unavailable</option>
 

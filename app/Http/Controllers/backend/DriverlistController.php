@@ -39,7 +39,7 @@ class DriverlistController extends Controller
         $driver->details = $request->details;
         
         $driver->save();
-        return redirect()->route('driver.index')->with('msg', "Create Driver Successfully");
+        return redirect()->route('driver.index')->with('msg', "Driver Create Successfully");
     }
 
     /**

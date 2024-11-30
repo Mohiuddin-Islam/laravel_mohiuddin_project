@@ -83,7 +83,7 @@
                 <li>
                     <a href="#book1" data-bs-toggle="collapse">
                         <i data-feather="users"></i>
-                        <span>Booking </span>
+                        <span>Bookings</span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="book1">

@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="card-body">
-                        <img src="{{asset('images/welcome.jpg')}}" style="width: 100%">
+                        <img src="{{asset('images/image.jpg')}}" style="width: 100%">
                     </div>
                 </div>
             </div>
