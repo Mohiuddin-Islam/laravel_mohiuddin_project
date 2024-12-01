@@ -27,6 +27,7 @@ class Booking extends Authenticatable
         'phone',
         'details',
         'car_id',
+        'date'
     ];
 
     /**
@@ -52,9 +53,6 @@ class Booking extends Authenticatable
         return $this->BelongsTo(Carlist::class);
     }
 
-    public function booking(){
-        return $this->BelongsTo(Booking::class);
-    }
 
 }
 

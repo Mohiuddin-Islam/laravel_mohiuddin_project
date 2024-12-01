@@ -46,25 +46,25 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li class="has-dropdown active menu-thumb">
-                                            <a href="index.html">
+                                            <a href="{{route('home')}}">
                                             Home </a>
                                             
                                         </li>
                                         <li>
-                                            <a href="about.html">About Us</a>
+                                            <a href="{{route('about')}}">About Us</a>
                                         </li>
                                         <li class="has-dropdown">
-                                            <a href="news.html">
+                                            <a href="#">
                                                 Feature
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="gallery.html">Gallery</a></li>
-                                                <li><a href="faq.html">Faq's</a></li>
+                                                <li><a href="{{route('gallery')}}">Gallery</a></li>
+                                                <li><a href="{{route('faq')}}">Faq's</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="program-details.html">
+                                            <a href="#">
                                                 Cars
                                                 <i class="fas fa-angle-down"></i>
                                             </a>

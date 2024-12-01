@@ -28,11 +28,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        // \App\Models\Client::create([
-        //     'name' => 'Abdullah',
-        //     'email' => 'asm@gmail.com',
-        //     'password' => Hash::make('admin123'),
-        // ]);
+        \App\Models\Client::create([
+            'name' => 'Abdullah',
+            'email' => 'asm@gmail.com',
+            'password' => Hash::make('admin123'),
+        ]);
 
         \App\Models\Carlist::factory(20)->create();
     }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\BookinglistController;
 use App\Http\Controllers\backend\CarlistController;
 use App\Http\Controllers\backend\DriverlistController;
+use App\Http\Controllers\frontend\BookingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,13 +19,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+// Route::get('/', function () {
+//     return view('frontend.home');
+// });
 
-Route::get('/about', function () {
-    return view('frontend.about');
-});
+// Route::get('/about', function () {
+//     return view('frontend.about');
+// });
+
+Route::view('/', 'frontend.home')->name('home');
+Route::view('/about', 'frontend.about')->name('about');
+Route::view('/gallery', 'frontend.gallery')->name('gallery');
+Route::view('/faq', 'frontend.faq')->name('faq');
+
+
+
+
+//Frontend Side Booking
+
+Route::get('/booking', [BookingController::class,'create'])->name('booking.create');
+Route::post('/booking', [BookingController::class,'store'])->name('booking.store');
 
 //Admin Dashboard
 
