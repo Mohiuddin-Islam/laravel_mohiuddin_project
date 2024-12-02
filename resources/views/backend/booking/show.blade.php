@@ -63,6 +63,12 @@
                 {{ $booking->details }}
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
+            <div class="form-group">
+                <strong>Date:</strong>
+                {{ $booking->date }}
+            </div>
+        </div>
         
     </div>
 @endsection

@@ -23,7 +23,6 @@ class BookingController extends Controller
     return view('frontend.booking', compact('carlists'));
 }
 
-
     /**
      * Store a newly created resource in storage.
      */
@@ -33,7 +32,6 @@ class BookingController extends Controller
             'name' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'date' => 'required',
             'carlist' => 'required',
             'details' => 'max:255|min:10',
         ]);

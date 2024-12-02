@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
+use App\Models\CarList;
 use Illuminate\Http\Request;
 
 class BookinglistController extends Controller
@@ -22,7 +23,8 @@ class BookinglistController extends Controller
      */
     public function create()
     {
-        return view('backend.booking.create');
+        $carlists = CarList::all();
+        return view('backend.booking.create',compact('carlists'));
     }
 
     /**
@@ -30,6 +32,15 @@ class BookinglistController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'carlist' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'date' =>'required',
+            'details' => 'max:255|min:10',
+        ]);
+
         $booking = new Booking;
 
         $booking->name = $request->name;
@@ -37,6 +48,7 @@ class BookinglistController extends Controller
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->details = $request->details;
+        $booking->date = $request->date;
         
         $booking->save();
         return redirect()->route('booking.index')->with('msg', "Add Booking Successfully");
@@ -63,11 +75,14 @@ class BookinglistController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
+        
+
         $booking->name = $request->name;
         $booking->car_id = $request->carlist;
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->details = $request->details;
+        $booking->date = $request->date;
         
         $booking->update();
         return redirect()->route('booking.index')->with('msg', "Booking Update Successfully");
@@ -82,4 +97,15 @@ class BookinglistController extends Controller
 
         return redirect()->route('booking.index')->with('msg', 'Booking Deleted Successfully');
     }
+
+    public function changeStatus($id)
+    {
+        $record = Booking::find($id);
+        $record->status =='pending' ? $record->status ='confirm': $record->status ='pending';
+        
+        $record->update();
+        return redirect()->back();
+    
+    }
+
 }

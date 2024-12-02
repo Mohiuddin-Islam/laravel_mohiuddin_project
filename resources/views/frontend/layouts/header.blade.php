@@ -105,8 +105,8 @@
                         </div>
                         <a href="#0" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
                         <div class="header-button">
-                            <a href="car-details.html" class="theme-btn">
-                                Find a Car
+                            <a href="{{route('book.create')}}" class="theme-btn">
+                                Book a Car
                             </a>
                         </div>
                         <div class="header__hamburger d-xl-none my-auto">

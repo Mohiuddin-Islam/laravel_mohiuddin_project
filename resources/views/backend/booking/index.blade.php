@@ -73,7 +73,7 @@
         <div class="card">
             <div class="card-header">
                 <h5 class="card-title mb-0" style="color:black">All BookingList</h5>
-                <a class="btn btn-warning mt-2" href="{{ route('booking.create') }}"> Create New Booking</a>
+                <a class="btn btn-warning mt-2" href="{{ route('booking.create') }}">Add New Booking</a>
                 @if (session('msg'))
                     <div class="alert alert-success mt-2">{{ session('msg') }}</div>
                         @endif
@@ -88,6 +88,9 @@
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Details</th>
+                            <th>Date</th>
+                            <th>Status</th>
+
                             <th style="width: 230px">Action</th>
                         </tr>
                     </thead>
@@ -99,6 +102,9 @@
                             <td>{{$item->email}}</td>
                             <td>{{$item->phone}}</td>
                             <td>{{$item->details}}</td>
+                            <td>{{$item->date}}</td>
+                            <td><a href="{{ route('changeStatus', $item->id) }}"
+                                class="{{ $item->status == 'confirm' ? 'btn btn-success' : 'btn btn-warning' }}">{{ $item->status }}</a></td>
                             
                             <td>
                                 

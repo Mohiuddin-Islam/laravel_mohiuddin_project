@@ -58,6 +58,11 @@
                         
                     </div>
                     <div class="mb-3">
+                        <label for="exampleInputPrice" class="form-label">Date</label>
+                        <input type="date" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="priceHelp" rows="10">{{ old('date')??$booking->date }}</input>
+                        
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleInputPrice" class="form-label">Details</label>
                         <textarea type="text" name="details" class="form-control" id="exampleInputEmail1" aria-describedby="priceHelp" placeholder="Enter Details Here" rows="10">{{ old('details')??$booking->details }}</textarea>
                         

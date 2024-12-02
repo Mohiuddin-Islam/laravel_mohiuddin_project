@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('phone',30);
             $table->string('details', 150);
             $table->date('date');
+            $table->enum('status',['pending','confirm'])->default('pending');
             $table->timestamps();
         });
     }

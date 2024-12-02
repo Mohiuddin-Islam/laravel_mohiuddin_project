@@ -17,7 +17,7 @@
 </div>
 
 <!--<< Breadcrumb Section Start >>-->
-<div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/bg-header-banner.jpg');">
+<div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/banner.jpg');">
     <div class="container">
         <div class="page-heading">
             <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
@@ -45,7 +45,7 @@
             <div class="row g-4">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="about-image">
-                        <img src="assets/img/about/01.png" alt="about-image">
+                        <img src="{{asset('assets/img/about/aboutus.webp')}}" alt="about-image">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -102,7 +102,7 @@
 <section class="team-section fix section-padding pt-0">
     <div class="container">
         <div class="section-title text-center">
-            <img src="assets/img/sub-icon.png" alt="icon-img" class="wow fadeInUp">
+            <img src="{{asset('assets/img/sub-icon.png')}}" alt="icon-img" class="wow fadeInUp">
             <span class="wow fadeInUp" data-wow-delay=".2s">Our expert people</span>
             <h2 class="wow fadeInUp" data-wow-delay=".4s">
                 Meet Our Professional <br>
@@ -113,10 +113,10 @@
             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="team-card-items">
                     <div class="border-shape">
-                        <img src="assets/img/team/border.png" alt="img">
+                        <img src="{{asset('assets/img/team/border.png')}}" alt="img">
                     </div>
                     <div class="team-image">
-                        <img src="assets/img/team/team-01.jpg" alt="team-img">
+                        <img src="{{asset('assets/img/team/team-01.webp')}}" alt="team-img">
                     </div>
                     <div class="team-content">
                         <h3><a href="about.html">Mike Hardson</a></h3>
@@ -133,10 +133,10 @@
             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                 <div class="team-card-items">
                     <div class="border-shape">
-                        <img src="assets/img/team/border.png" alt="img">
+                        <img src="{{asset('assets/img/team/border.png')}}" alt="img">
                     </div>
                     <div class="team-image">
-                        <img src="assets/img/team/team-02.jpg" alt="team-img">
+                        <img src="{{asset('assets/img/team/team-02.webp')}}" alt="team-img">
                     </div>
                     <div class="team-content">
                         <h3><a href="about.html">Aleesha Brown</a></h3>
@@ -153,10 +153,10 @@
             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                 <div class="team-card-items">
                     <div class="border-shape">
-                        <img src="assets/img/team/border.png" alt="img">
+                        <img src="{{asset('assets/img/team/border.png')}}" alt="img">
                     </div>
                     <div class="team-image">
-                        <img src="assets/img/team/team-03.jpg" alt="team-img">
+                        <img src="{{asset('assets/img/team/team-03.webp')}}" alt="team-img">
                     </div>
                     <div class="team-content">
                         <h3><a href="about.html">David Jhonson</a></h3>
@@ -175,13 +175,13 @@
 </section>
 
 <!-- Funfact Section Start -->
-<section class="funfact-section section-padding fix bg-cover mt-0" style="background-image: url('assets/img/funfact-bg.jpg');">
+<section class="funfact-section section-padding fix bg-cover mt-0" style="background-image: url('assets/img/banner7.jpg');">
     <div class="container">
         <div class="funfact-wrapper mt-0">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
                     <div class="section-title mb-0">
-                        <img src="assets/img/sub-icon-2.png" alt="icon-img" class="wow fadeInUp">
+                        <img src="{{asset('assets/img/sub-icon-2.png')}}" alt="icon-img" class="wow fadeInUp">
                         <span class="wow fadeInUp" data-wow-delay=".2s">fun facts</span>
                         <h2 class="text-white wow fadeInUp" data-wow-delay=".4s">
                             Save Time & Money <br>
@@ -194,7 +194,7 @@
                     <div class="funfact-counter-area">
                         <div class="funfact-items wow fadeInUp" data-wow-delay=".3s">
                             <div class="icon">
-                                <img src="assets/img/icon/car.png" alt="img">
+                                <img src="{{asset('assets/img/icon/car.png')}}" alt="img">
                             </div>
                             <h2><span class="count">990</span></h2>
                             <p>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="funfact-items wow fadeInUp" data-wow-delay=".5s">
                             <div class="icon">
-                                <img src="assets/img/icon/center.png" alt="img">
+                                <img src="{{asset('assets/img/icon/center.png')}}" alt="img">
                             </div>
                             <h2><span class="count">230</span></h2>
                             <p>
@@ -214,7 +214,7 @@
                         </div>
                         <div class="funfact-items wow fadeInUp" data-wow-delay=".7s">
                             <div class="icon">
-                                <img src="assets/img/icon/like.png" alt="img">
+                                <img src="{{asset('assets/img/icon/like.png')}}" alt="img">
                             </div>
                             <h2><span class="count">660</span></h2>
                             <p>
@@ -232,12 +232,12 @@
 <!-- Testimonial Section Start -->
 <section class="testimonial-section fix section-padding">
     <div class="testimonial-bg-shape">
-        <img src="assets/img/testimonial/testimonial-bg.jpg" alt="shape-img">
+        <img src="{{asset('assets/img/testimonial/testimonial-bg.jpg')}}" alt="shape-img">
     </div>
     <div class="container">
         <div class="section-title-area">
             <div class="section-title">
-                <img src="assets/img/sub-icon.png" alt="icon-img" class="wow fadeInUp">
+                <img src="{{asset('assets/img/sub-icon.png')}}" alt="icon-img" class="wow fadeInUp">
                 <span class="wow fadeInUp" data-wow-delay=".2s">our testimonials</span>
                 <h2 class="wow fadeInUp" data-wow-delay=".4s">
                     What They’re Talking <br>
@@ -245,7 +245,7 @@
                 </h2>
             </div>
             <p class="wow fadeInUp" data-wow-delay=".5s">
-                Lorem ipsum dolor sit amet nsectetur cing elituspe ndisse suscipit <br> sagitis leo sit.
+                I was very impresed by the remons service lorem ipsum is simply free text used by copy typing refreshing. Neque porro est qui dolorem ipsum quia.
             </p>
         </div>
         <div class="swiper testimonial-slider">
@@ -270,7 +270,7 @@
                             </div>
                         </div>
                         <div class="client-info-items d-flex align-items-center gap-3">
-                            <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client-1.png');"></div>
+                            <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client3.png');"></div>
                             <div class="content">
                                 <h5>
                                     Jessica Brown
@@ -300,7 +300,7 @@
                             </div>
                         </div>
                         <div class="client-info-items d-flex align-items-center gap-3">
-                            <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client-2.png');"></div>
+                            <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client4.png');"></div>
                             <div class="content">
                                 <h5>
                                     Kevin Martin
@@ -330,7 +330,7 @@
                             </div>
                         </div>
                         <div class="client-info-items d-flex align-items-center gap-3">
-                            <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client-3.png');"></div>
+                            <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client5.png');"></div>
                             <div class="content">
                                 <h5>
                                     Jessica Brown
@@ -350,18 +350,18 @@
     <div class="container-fluid">
         <div class="car-sale-wrapper">
             <div class="sale-shape">
-                <img src="assets/img/bg-shape-saleoff.png" alt="shape-img">
+                <img src="{{asset('assets/img/bg-shape-saleoff.png')}}" alt="shape-img">
             </div>
             <div class="badge-shape">
-                <img src="assets/img/bagde.png" alt="shape-img">
+                <img src="{{asset('assets/img/bagde.png')}}" alt="shape-img">
             </div>
             <div class="car-shape">
-                <img src="assets/img/car.png" alt="img">
+                <img src="{{asset('assets/img/bgm.jpg')}}" alt="img">
             </div>
             <div class="car-sale-content">
                 <h2 class="wow fadeInUp" data-wow-delay=".3s">Sale 50% Off</h2>
                 <h3 class="wow fadeInUp" data-wow-delay=".5s">on all rental cars for 1 month</h3>
-                <a href="car-details.html" class="theme-btn bg-header wow fadeInUp" data-wow-delay=".7s">Book Your Car</a>
+                <a href="{{route('book.create')}}" class="theme-btn bg-header wow fadeInUp" data-wow-delay=".7s">Book Your Car</a>
             </div>
         </div>
     </div>

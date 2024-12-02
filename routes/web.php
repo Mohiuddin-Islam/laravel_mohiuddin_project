@@ -4,19 +4,10 @@ use App\Http\Controllers\backend\BookinglistController;
 use App\Http\Controllers\backend\CarlistController;
 use App\Http\Controllers\backend\DriverlistController;
 use App\Http\Controllers\frontend\BookingController;
+use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 
 // Route::get('/', function () {
@@ -27,18 +18,20 @@ use Illuminate\Support\Facades\Route;
 //     return view('frontend.about');
 // });
 
-Route::view('/', 'frontend.home')->name('home');
+
+//Frontend Side Route
+
+Route::get('/', [HomeController::class,'index'])->name('home');
 Route::view('/about', 'frontend.about')->name('about');
 Route::view('/gallery', 'frontend.gallery')->name('gallery');
 Route::view('/faq', 'frontend.faq')->name('faq');
-
-
+Route::view('/booking', 'frontend.booking')->name('booking');
 
 
 //Frontend Side Booking
 
-Route::get('/booking', [BookingController::class,'create'])->name('booking.create');
-Route::post('/booking', [BookingController::class,'store'])->name('booking.store');
+Route::get('/booking', [BookingController::class,'create'])->name('book.create');
+Route::post('/booking', [BookingController::class,'store'])->name('book.store');
 
 //Admin Dashboard
 
@@ -65,17 +58,16 @@ Route::middleware('guest:admin')->prefix('admin')->group( function () {
     Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'login'])->name('admin.login');
     Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'check_user']);
 
-
 });
 
 Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'logout'])->name('admin.logout');
-
     Route::view('/admin/dashboard','backend.admin_dashboard');
     Route::resource('/carlist', CarlistController::class);
     Route::resource('/driver', DriverlistController::class);
     Route::resource('/booking', BookinglistController::class);
+    Route::get('/booking/status/{id}',[BookinglistController::class,'changeStatus'])->name('changeStatus');
 
 });
 

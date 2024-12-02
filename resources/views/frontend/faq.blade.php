@@ -2,7 +2,7 @@
 
 @section('content')
  <!--<< Breadcrumb Section Start >>-->
- <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/bg-header-banner.jpg');">
+ <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/banner.jpg');">
     <div class="container">
         <div class="page-heading">
             <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
