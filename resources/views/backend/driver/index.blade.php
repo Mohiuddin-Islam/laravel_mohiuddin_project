@@ -99,7 +99,6 @@
                             <td>{{$item->email}}</td>
                             <td>{{$item->phone}}</td>
                             <td>{{$item->details}}</td>
-                            
                             <td>
                                 
                                 <form action="{{route('driver.destroy', $item->id)}}"

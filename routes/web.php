@@ -26,6 +26,7 @@ Route::view('/about', 'frontend.about')->name('about');
 Route::view('/gallery', 'frontend.gallery')->name('gallery');
 Route::view('/faq', 'frontend.faq')->name('faq');
 Route::view('/booking', 'frontend.booking')->name('booking');
+Route::view('/contact', 'frontend.contact')->name('contact');
 
 
 //Frontend Side Booking

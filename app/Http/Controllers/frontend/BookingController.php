@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
 use App\Models\CarList;
+use App\Models\Driver;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -19,8 +20,9 @@ class BookingController extends Controller
      */
     public function create()
 {
+    $drivers = Driver::all();
     $carlists = CarList::all();
-    return view('frontend.booking', compact('carlists'));
+    return view('frontend.booking', compact('carlists','drivers'));
 }
 
     /**

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2024 at 08:40 PM
+-- Generation Time: Dec 03, 2024 at 09:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -52,12 +52,12 @@ INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `crea
 
 CREATE TABLE `bookings` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `car_id` int(11) NOT NULL,
+  `car_id` int(11) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(30) NOT NULL,
   `details` varchar(150) NOT NULL,
-  `date` date DEFAULT NULL,
+  `date` date NOT NULL,
   `status` enum('pending','confirm') NOT NULL DEFAULT 'pending',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -68,9 +68,13 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `car_id`, `name`, `email`, `phone`, `details`, `date`, `status`, `created_at`, `updated_at`) VALUES
-(1, 16, 'Abdullah', 'asm@gmail.com', '01752437955', 'Booked Now!!!', NULL, 'confirm', '2024-12-02 11:58:25', '2024-12-02 12:26:47'),
-(2, 12, 'Jamil Hossain', 'jamil@gmail.com', '01567980577', 'Urgently Book Now!!!', NULL, 'pending', '2024-12-02 12:26:15', '2024-12-02 12:26:15'),
-(3, 15, 'Rakib Hossain', 'rakib@gmail.com', '0175243744', 'Booked Now!!!', NULL, 'pending', '2024-12-02 12:27:52', '2024-12-02 12:27:52');
+(2, 12, 'Jamil Hossain', 'jamil@gmail.com', '01567980577', 'Urgently Book Now!!!', '0000-00-00', 'pending', '2024-12-02 12:26:15', '2024-12-02 12:26:15'),
+(3, 15, 'Rakib Hossain', 'rakib@gmail.com', '0175243744', 'Booked Now!!!', '0000-00-00', 'confirm', '2024-12-02 12:27:52', '2024-12-03 13:02:15'),
+(4, 16, 'Abir Hossain', 'abir@gmail.com', '01724852234', 'Booked Now!!!', '2024-12-04', 'pending', '2024-12-03 08:23:46', '2024-12-03 08:24:13'),
+(5, 11, 'Joys', 'joy@gmail.com', '0175254862', 'Urgently Book Now!!!', '2024-12-05', 'pending', '2024-12-03 08:26:47', '2024-12-03 08:26:47'),
+(6, 13, 'Nasir Ahmed', 'nasir@gmail.com', '01754589648', 'Good Day!!', '2024-12-04', 'confirm', '2024-12-03 08:31:40', '2024-12-03 08:48:16'),
+(7, 15, 'Safin Ahmed', 'safin@gmail.com', '01789654156', 'Urgently Book Now!!!', '2024-12-06', 'pending', '2024-12-03 09:00:38', '2024-12-03 09:00:38'),
+(8, 19, 'Mahamud', 'mahamud@gmail.com', '01567980896', 'Booked Now!!!', '2024-12-06', 'pending', '2024-12-03 12:58:01', '2024-12-03 12:58:01');
 
 -- --------------------------------------------------------
 
@@ -80,7 +84,7 @@ INSERT INTO `bookings` (`id`, `car_id`, `name`, `email`, `phone`, `details`, `da
 
 CREATE TABLE `car_lists` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `brand` varchar(255) DEFAULT NULL,
+  `brand` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
   `engine` varchar(255) NOT NULL,
   `price_per_day` decimal(8,2) NOT NULL,
@@ -152,8 +156,11 @@ CREATE TABLE `drivers` (
 --
 
 INSERT INTO `drivers` (`id`, `car_id`, `name`, `email`, `phone`, `details`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Arif Hasan', 'arif@gmail.com', '01758965845', 'Basabo,Buddo-Mondir!!!', '2024-12-02 12:23:07', '2024-12-02 12:23:23'),
-(2, NULL, 'Jamil Hossain', 'jamil@gmail.com', '01965589325', 'Sajahanpur, Motijheel', '2024-12-02 12:24:22', '2024-12-02 12:24:22');
+(1, 0, 'Arif Hasan', 'arif@gmail.com', '01758965845', 'Basabo,Buddo-Mondir!!!', '2024-12-02 12:23:07', '2024-12-02 12:23:23'),
+(2, 0, 'Jamil Hossain', 'jamil@gmail.com', '01965589325', 'Sajahanpur, Motijheel', '2024-12-02 12:24:22', '2024-12-02 12:24:22'),
+(3, 0, 'Nazrul Hossain', 'nazrul@gmail.com', '01758962478', 'Jatrabari, Good Driver!!', '2024-12-03 08:50:35', '2024-12-03 08:50:35'),
+(4, 0, 'Saif Jahan', 'saif@gmail.com', '01789654236', 'Siddiq Bazar, Drive Toyota Car!!', '2024-12-03 08:52:54', '2024-12-03 08:52:54'),
+(5, NULL, 'Nur Ahmed', 'nur@gmail.com', '01758945897', 'Malibagh, Drive BMW-i8', '2024-12-03 09:08:20', '2024-12-03 14:01:57');
 
 -- --------------------------------------------------------
 
@@ -330,7 +337,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `car_lists`
@@ -348,7 +355,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

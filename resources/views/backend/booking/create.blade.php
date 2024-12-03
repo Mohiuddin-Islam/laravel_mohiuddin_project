@@ -26,13 +26,10 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
 @endsection
 
-
 @section('content')
     <div class="row">
-
         <div class="col-lg-8 offset-2 mt-4">
             <div class="card">
-
                 <div class="card-header">
                     <h5 class="card-title mb-0" style="color:black">Add New Booking</h5>
                 </div><!-- end card header -->
@@ -44,7 +41,6 @@
                             <label for="exampleInputBrand" class="form-label">Name</label>
                             <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="brandHelp" placeholder="Enter Name">
-
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputModel" class="form-label">Email</label>
@@ -56,9 +52,7 @@
                             <label for="exampleInputEngine" class="form-label">Phone</label>
                             <input type="text" name="phone" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="engineHelp" placeholder="Enter Phone Number">
-
                         </div>
-
                         <div class="mb-3">
                             <label for="exampleInputEngine" class="form-label">CarList</label>
                             <select name="carlist" class="form-control" class="category" id="exampleInputEmail1"
@@ -74,17 +68,13 @@
                         <div class="mb-3">
                             <label for="exampleInputPrice" class="form-label">Details</label>
                             <textarea type="text" name="details" class="form-control" id="exampleInputEmail1" aria-describedby="priceHelp"
-                                placeholder="Enter Details Here" rows="10"></textarea>
-
+                                placeholder="Enter Details Here" rows="5"></textarea>
                         </div>
-
                         <div class="mb-3">
                             <label for="exampleInputPrice" class="form-label">Date</label>
                             <input type="date" name="date" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="priceHelp"></input>
-
                         </div>
-
                         <button type="submit" class="btn btn-primary">SUBMIT</button>
                     </form>
                 </div>

@@ -209,15 +209,14 @@
                                                     <option value="">Choose Car</option>
                                                     @foreach ($carlists as $carlist)
                                                         <option value="{{ $carlist->id }}" @selected(old('carlist') == $carlist->id)>
-                                                            {{ $carlist->brand }}</option>
+                                                            {{ $carlist->brand }}->{{ $carlist->model }}</option>
                                                     @endforeach
 
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-4">
                                                 <div class="form-clt">
                                                     <label class="label-text">Date</label>
                                             <input type="date" name="date" value="{{ old('date') }}"
@@ -226,6 +225,21 @@
                                         @error('date')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-clt">
+                                            <label class="label-text">Driver</label>
+                                            <div class="category-oneadjust">
+                                                <select name="driver" class="category" style="display: none;">
+                                                    <option value="">Choose Driver</option>
+                                                    @foreach ($drivers as $driver)
+                                                        <option value="{{ $driver->id }}" @selected(old('driver') == $carlist->id)>
+                                                            {{ $driver->name }}</option>
+                                                    @endforeach
+
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <button class="theme-btn" type="submit">
