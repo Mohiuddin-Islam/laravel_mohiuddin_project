@@ -1,10 +1,10 @@
 @extends('frontend.layouts.app')
 
-@section('cssfile')
+@section('cssfiles')
     @parent
 @endsection
 
-@section('jsfile')
+@section('jsfiles')
     @parent
 @endsection
 

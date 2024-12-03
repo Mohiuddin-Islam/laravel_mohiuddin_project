@@ -216,16 +216,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-clt">
-                                            <label class="label-text">Pick-up Date</label>
-                                            <div id="datepicker3" class="input-group date" data-date-format="dd-mm-yyyy">
-                                                <input class="form-control" type="date" name="date" placeholder="Check in"
-                                                    readonly>
-                                                <span class="input-group-addon"> <i
-                                                        class="fa-solid fa-calendar-days"></i></span>
-                                            </div>
+                                
+                                            <div class="col-lg-6">
+                                                <div class="form-clt">
+                                                    <label class="label-text">Date</label>
+                                            <input type="date" name="date" value="{{ old('date') }}"
+                                                class="form-control">
                                         </div>
+                                        @error('date')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="col-lg-12">
                                         <button class="theme-btn" type="submit">

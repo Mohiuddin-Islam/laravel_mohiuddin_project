@@ -35,8 +35,9 @@ class RegisterController extends Controller
             'status' =>$request->status
         ]);
 
-        Auth::guard('client')->login($client);
+        // Auth::guard('client')->login($client);
 
-        return redirect(RouteServiceProvider::CLIENT_DASHBOARD);
+        // return redirect(RouteServiceProvider::CLIENT_DASHBOARD);
+        return redirect()->route('client.login');
     }
 }
