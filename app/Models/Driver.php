@@ -26,7 +26,7 @@ class Driver extends Authenticatable
         'email',
         'phone',
         'details',
-        'car_id',
+        'car_list_id',
     ];
 
     /**

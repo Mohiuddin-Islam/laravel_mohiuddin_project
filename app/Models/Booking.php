@@ -26,7 +26,7 @@ class Booking extends Authenticatable
         'email',
         'phone',
         'details',
-        'car_id',
+        'car_list_id',
         'date'
     ];
 
@@ -49,10 +49,9 @@ class Booking extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function carlist(){
+    public function car_list(){
         return $this->BelongsTo(Carlist::class);
     }
-
 
 }
 

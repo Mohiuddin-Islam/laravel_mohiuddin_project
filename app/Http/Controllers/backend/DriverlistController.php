@@ -33,7 +33,7 @@ class DriverlistController extends Controller
         $driver = new Driver;
 
         $driver->name = $request->name;
-        $driver->car_id = $request->carlist;
+        $driver->car_list_id = $request->carlist;
         $driver->email = $request->email;
         $driver->phone = $request->phone;
         $driver->details = $request->details;
@@ -64,7 +64,7 @@ class DriverlistController extends Controller
     public function update(Request $request, Driver $driver)
     {
         $driver->name = $request->name;
-        $driver->car_id = $request->carlist;
+        $driver->car_list_id = $request->carlist;
         $driver->email = $request->email;
         $driver->phone = $request->phone;
         $driver->details = $request->details;

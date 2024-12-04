@@ -44,7 +44,7 @@ class BookinglistController extends Controller
         $booking = new Booking;
 
         $booking->name = $request->name;
-        $booking->car_id = $request->carlist;
+        $booking->car_list_id = $request->carlist;
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->details = $request->details;
@@ -78,7 +78,7 @@ class BookinglistController extends Controller
         
 
         $booking->name = $request->name;
-        $booking->car_id = $request->carlist;
+        $booking->car_list_id = $request->carlist;
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->details = $request->details;

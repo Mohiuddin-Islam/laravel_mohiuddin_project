@@ -98,7 +98,7 @@
                                                     <div class="form-group mb-0 row">
                                                         <div class="col-12">
                                                             <div class="d-grid">
-                                                                <button class="btn btn-primary" type="submit"> Log In </button>
+                                                                <button class="btn btn-primary" type="submit"> Log In </button><br>
                                                             </div>
                                                         </div>
                                                     </div>

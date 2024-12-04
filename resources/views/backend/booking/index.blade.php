@@ -89,7 +89,6 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Details</th>
-                                <th>Driver</th>
                                 <th>Brand</th>
                                 <th>Model</th>
                                 <th>Date</th>
@@ -105,9 +104,8 @@
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->phone }}</td>
                                     <td>{{ $item->details }}</td>
-                                    <td>{{ $item->driver ? $item->driver->name : 'N/A' }}</td>
-                                    <td>{{ $item->carlist ? $item->carlist->brand : 'N/A' }}</td>
-                                    <td>{{ $item->carlist ? $item->carlist->model : 'N/A' }}</td>
+                                    <td>{{ $item->car_list->brand }}</td>
+                                    <td>{{ $item->car_list->model }}</td>
                                     <td>{{ $item->date }}</td>
                                     <td><a href="{{ route('changeStatus', $item->id) }}"
                                     class="{{ $item->status == 'confirm' ? 'btn btn-success' : 'btn btn-warning' }}">{{ $item->status }}</a>
