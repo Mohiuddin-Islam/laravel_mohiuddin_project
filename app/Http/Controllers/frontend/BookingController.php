@@ -43,7 +43,7 @@ class BookingController extends Controller
         $app->email = $request->email;
         $app->phone = $request->phone;
         $app->date = $request->date;
-        $app->car_id = $request->carlist; // corrected 'car_lists' to 'carlist'
+        $app->car_list_id = $request->carlist; // corrected 'car_lists' to 'carlist'
         $app->details = $request->details;
 
         $app->save();

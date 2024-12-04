@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\backend\BookinglistController;
 use App\Http\Controllers\backend\CarlistController;
+use App\Http\Controllers\backend\ClientlistController;
 use App\Http\Controllers\backend\DriverlistController;
 use App\Http\Controllers\frontend\BookingController;
 use App\Http\Controllers\frontend\HomeController;
@@ -27,6 +28,12 @@ Route::view('/gallery', 'frontend.gallery')->name('gallery');
 Route::view('/faq', 'frontend.faq')->name('faq');
 Route::view('/booking', 'frontend.booking')->name('booking');
 Route::view('/contact', 'frontend.contact')->name('contact');
+Route::view('/blog', 'frontend.blog')->name('blog');
+Route::view('/blog_details', 'frontend.blog_details')->name('blog_details');
+Route::view('/car', 'frontend.car')->name('car');
+Route::view('/car_sidebar', 'frontend.car_sidebar')->name('car_sidebar');
+Route::view('/car_details', 'frontend.car_details')->name('car_details');
+
 
 
 //Frontend Side Booking
@@ -70,6 +77,8 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::resource('/booking', BookinglistController::class);
     Route::get('/booking/status/{id}',[BookinglistController::class,'changeStatus'])->name('changeStatus');
 
+
+
 });
 
 //Client Route
@@ -82,13 +91,11 @@ Route::middleware('guest:client')->prefix('client')->group( function () {
     Route::get('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'register'])->name('client.register');
     Route::post('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'check_user']);
 
-
 });
 
 Route::middleware('auth:client')->prefix('client')->group( function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Client\LoginController::class, 'logout'])->name('client.logout');
-
     Route::view('/dashboard','backend.client_dashboard');
-
+    
 });

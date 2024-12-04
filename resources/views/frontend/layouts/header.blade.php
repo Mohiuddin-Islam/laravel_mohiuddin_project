@@ -54,7 +54,7 @@
                                             <a href="{{route('about')}}">About Us</a>
                                         </li>
                                         <li class="has-dropdown">
-                                            <a href="#">
+                                            <a href="{{route('gallery')}}">
                                                 Feature
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
@@ -64,25 +64,23 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                Cars
+                                            <a href="{{route('car')}}">
+                                                CarList
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="car-grid.html">Car Grid</a></li>
-                                                <li><a href="car-list.html">Car List</a></li>
-                                                <li><a href="car-list-sidebar.html">Car Sidebar</a></li>
-                                                <li><a href="car-details.html">Car Details</a></li>
+                                                <li><a href="{{route('car_sidebar')}}">Car Sidebar</a></li>
+                                                <li><a href="{{route('car_details')}}">Car Details</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="news.html">
+                                            <a href="{{route('blog')}}">
                                                 Blog
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="news.html">Blog</a></li>
-                                                <li><a href="news-details.html">Blog Details</a></li>
+                                                
+                                                <li><a href="{{route('blog_details')}}">Blog Details</a></li>
                                             </ul>
                                         </li>
                                         <li>

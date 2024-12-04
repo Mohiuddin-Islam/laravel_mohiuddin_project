@@ -7,7 +7,7 @@
             <div class="page-heading">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
                     <li>
-                        <a href="{{route('home')}}">
+                        <a href="index.html">
                             Home
                         </a>
                     </li>
@@ -31,7 +31,7 @@
                     <div class="col-lg-8">
                         <div class="car-details-items">
                             <div class="car-image">
-                                <img src="{{asset('assets/img/car/bmw_i8.png')}}" alt="img">
+                                <img src="assets/img/car/car-details.webp" alt="img">
                             </div>
                             <div class="car-content">
                                 <div class="star">
@@ -54,7 +54,7 @@
                                     <div class="icon-details-main-items">
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/icon/07.png')}}" alt="img">
+                                                <img src="assets/img/car/icon/07.png" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>body:</h6>
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/icon/07.png')}}" alt="img">
+                                                <img src="assets/img/car/icon/07.png" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Mileage:</h6>
@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/icon/07.png')}}" alt="img">
+                                                <img src="assets/img/car/icon/07.png" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Year:</h6>
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/icon/07.png')}}" alt="img">
+                                                <img src="assets/img/car/icon/07.png" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Engine:</h6>
@@ -92,7 +92,7 @@
                                     <div class="icon-details-main-items">
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/door.svg')}}" alt="img">
+                                                <img src="assets/img/car/door.svg" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Passengers:</h6>
@@ -101,7 +101,7 @@
                                         </div>
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/seat.svg')}}" alt="img">
+                                                <img src="assets/img/car/seat.svg" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Gear:</h6>
@@ -110,7 +110,7 @@
                                         </div>
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/automatic.svg')}}" alt="img">
+                                                <img src="assets/img/car/automatic.svg" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Gear:</h6>
@@ -119,7 +119,7 @@
                                         </div>
                                         <div class="icon-items">
                                             <div class="icon">
-                                                <img src="{{asset('assets/img/car/petrol.svg')}}" alt="img">
+                                                <img src="assets/img/car/petrol.svg" alt="img">
                                             </div>
                                             <div class="content">
                                                 <h6>Fuel:</h6>
@@ -159,25 +159,28 @@
                                         <p>$70.00</p>
                                     </div>
                                 </div>
-                                
+                                <div class="car-video">
+                                    <img src="assets/img/car/car-7.webp" alt="img">
+                                    <div class="video-box">
+                                        <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
+                                            class="video-btn ripple video-popup">
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="car-booking-items">
                             <div class="booking-header">
-                                @if (session('msg'))
-                            <div class="alert alert-success">{{ session('msg') }}</div>
-                        @endif
                                 <h3>Request for Booking</h3>
                                 <p>Send your requirement to us. We will check email and contact you soon.</p>
                             </div>
-                            <form action="{{ route('book.store') }}" id="contact-form" method="POST"
-                                class="contact-form-items">
-                                @csrf
+                            <form action="#" id="contact-form" method="POST" class="contact-form-items">
                                 <div class="row g-4">
                                     <div class="col-lg-6">
                                         <div class="form-clt">
                                             <label class="label-text">Your Name</label>
-                                            <input type="text" name="name" id="name" placeholder="Arif Islam">
+                                            <input type="text" name="name" id="name" placeholder="Afzaal Islam">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -196,60 +199,160 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-clt">
-                                            <label class="label-text">Details</label>
-                                            <input type="text" name="details" id="address"
-                                                placeholder="Details Here">
+                                            <label class="label-text">Address</label>
+                                            <input type="text" name="address" id="address" placeholder="Address">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-clt">
-                                            <label class="label-text">CarList</label>
+                                            <label class="label-text">Pick-up Location</label>
                                             <div class="category-oneadjust">
-                                                <select name="carlist" class="category" style="display: none;">
-                                                    <option value="">Choose Car</option>
-                                                    @foreach ($carlists as $carlist)
-                                                        <option value="{{ $carlist->id }}" @selected(old('carlist') == $carlist->id)>
-                                                            {{ $carlist->brand }}->{{ $carlist->model }}</option>
-                                                    @endforeach
-
+                                                <select name="cate" class="category" style="display: none;">
+                                                    <option value="1">
+                                                        Select Location
+                                                    </option>
+                                                    <option value="1">
+                                                        Houston
+                                                    </option>
+                                                    <option value="1">
+                                                        Texas
+                                                    </option>
+                                                    <option value="1">
+                                                        New York
+                                                    </option>
+                                                    <option value="1">
+                                                        Other Location
+                                                    </option>
                                                 </select>
+                                                <div class="nice-select category" tabindex="0"><span class="current">
+                                                        Select Location
+                                                    </span>
+                                                    <ul class="list">
+                                                        <li data-value="1" class="option selected">
+                                                            Select Location
+                                                        </li>
+                                                        <li data-value="1" class="option">
+                                                            Houston
+                                                        </li>
+                                                        <li data-value="1" class="option">
+                                                            Texas
+                                                        </li>
+                                                        <li data-value="1" class="option">
+                                                            New York
+                                                        </li>
+                                                        <li data-value="1" class="option">
+                                                            Other Location
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-clt">
-                                                    <label class="label-text">Date</label>
-                                            <input type="date" name="date" value="{{ old('date') }}"
-                                                class="form-control">
+                                    <div class="col-lg-4">
+                                        <div class="form-clt">
+                                            <label class="label-text">Pick-up Date</label>
+                                            <div id="datepicker3" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                <input class="form-control" type="text" placeholder="Check in"
+                                                    readonly>
+                                                <span class="input-group-addon"> <i
+                                                        class="fa-solid fa-calendar-days"></i></span>
+                                            </div>
                                         </div>
-                                        @error('date')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-clt">
-                                            <label class="label-text">Driver</label>
-                                            <div class="category-oneadjust">
-                                                <select name="driver" class="category" style="display: none;">
-                                                    <option value="">Choose Driver</option>
-                                                    @foreach ($drivers as $driver)
-                                                        <option value="{{ $driver->id }}" @selected(old('driver') == $carlist->id)>
-                                                            {{ $driver->name }}</option>
-                                                    @endforeach
-
-                                                </select>
+                                            <label class="label-text">Drop-off Date</label>
+                                            <div id="datepicker4" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                <input class="form-control" type="text" placeholder="Check in"
+                                                    readonly>
+                                                <span class="input-group-addon"> <i
+                                                        class="fa-solid fa-calendar-days"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="input-save-items-area">
+                                            <div class="input-save-items">
+                                                <div class="input-save d-flex align-items-center mb-3">
+                                                    <input type="checkbox" class="form-check-input" name="save-for-next"
+                                                        id="saveForNext1">
+                                                    <label for="saveForNext1">Driver</label>
+                                                </div>
+                                                <div class="input-save d-flex align-items-center">
+                                                    <input type="checkbox" class="form-check-input" name="save-for-next"
+                                                        id="saveForNext2">
+                                                    <label for="saveForNext2">Baby Seat</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-save-items">
+                                                <div class="input-save d-flex align-items-center mb-3">
+                                                    <label>$10.00 / Day</label>
+                                                </div>
+                                                <div class="input-save d-flex align-items-center">
+                                                    <label>$30.00 / Total</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <button class="theme-btn" type="submit">
-                                            Book Now
+                                            Send Request
                                         </button>
                                     </div>
                                 </div>
                             </form>
                         </div>
-
+                        <div class="comment-reviews">
+                            <h3>2 Reviews</h3>
+                            <div class="car-single-comment d-flex gap-4 pb-5">
+                                <div class="image">
+                                    <img src="assets/img/car/comment01.webp" alt="image">
+                                </div>
+                                <div class="content">
+                                    <div class="head d-flex flex-wrap gap-3 align-items-center justify-content-between">
+                                        <div class="con">
+                                            <h4>Kevin Martin</h4>
+                                        </div>
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <p class="mt-4">
+                                        It has survived not only five centuries, but also the into electronic typesetting
+                                        simply fee text aunchanged. It was popularised in the sheets containing lorem ipsum
+                                        is simply free text.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="car-single-comment d-flex gap-4 pt-5 border-none">
+                                <div class="image">
+                                    <img src="assets/img/car/comment02.webp" alt="image">
+                                </div>
+                                <div class="content">
+                                    <div class="head d-flex flex-wrap gap-3 align-items-center justify-content-between">
+                                        <div class="con">
+                                            <h4>Sarah Albert</h4>
+                                        </div>
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <p class="mt-4">
+                                        It has survived not only five centuries, but also the into electronic typesetting
+                                        simply fee text aunchanged. It was popularised in the sheets containing lorem ipsum
+                                        is simply free text.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="car-list-sidebar">
@@ -363,70 +466,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Car Rentals Section Start -->
-    <section class="car-rentals-section-2 section-padding fix pt-0">
-        <div class="container">
-            <div class="section-title text-center">
-                <img src="assets/img/sub-icon.png" alt="icon-img" class="wow fadeInUp">
-                <span class="wow fadeInUp" data-wow-delay=".2s">Checkout our new cars</span>
-                <h2 class="wow fadeInUp" data-wow-delay=".4s">
-                    Similar Cars Available
-                </h2>
-            </div>
-            <div class="row">
-                @foreach ($carlists as $carlist)
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="car-rentals-items">
-                        <div class="car-image">
-                            <img src="{{ asset($carlist->image) }}" alt="img">
-                        </div>
-                        <div class="car-content">
-                            <div class="post-cat">
-                                {{$carlist->model}}
-                            </div>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
-                            </div>
-                            <h4><a href="car-details.html">{{$carlist->brand}}</a></h4>
-                            <h6>{{ $carlist->price_per_day }} <span>/ Day</span></h6>
-                            <div class="icon-items">
-                                <ul>
-                                    <li>
-                                        <img src="{{asset('assets/img/car/seat.svg')}}" alt="img" class="me-1">
-                                        6 Seats
-                                    </li>
-                                    <li>
-                                        <img src="{{asset('assets/img/car/door.svg')}}" alt="img" class="me-1">
-                                        2 Doors
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <img src="{{asset('assets/img/car/automatic.svg')}}" alt="img" class="me-1">
-                                        Automatic
-                                    </li>
-                                    <li>
-                                        <img src="{{asset('assets/img/car/petrol.svg')}}" alt="img" class="me-1">
-                                        Petrol
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="{{ route('book.create') }}" class="theme-btn bg-color w-100 text-center">Book Now <i
-                                    class="fa-solid fa-arrow-right ps-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                @endforeach
             </div>
         </div>
     </section>

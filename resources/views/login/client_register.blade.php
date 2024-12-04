@@ -44,9 +44,9 @@
                                         <div class="auth-title-section mb-3 text-center">
                                             <h3 class="text-dark fs-20 fw-medium mb-2">Welcome back</h3>
                                             <p class="text-dark text-capitalize fs-14 mb-0">Client Registration Form</p>
-                                            @if($errors->has('email'))
-                                        <div class="alert alert-danger">{{$errors->first('email')}}</div>
-                                        @endif
+                                            @if ($errors->has('email'))
+                                                <div class="alert alert-danger">{{ $errors->first('email') }}</div>
+                                            @endif
                                         </div>
 
                                         <div class="row">
@@ -86,33 +86,40 @@
                                         <div class="saprator my-4"><span>or continue with email</span></div>
 
                                         <div class="pt-0">
-                                            <form action="{{ route('client.register') }}" class="my-4" method="POST" enctype="multipart/form-data">
+                                            <form action="{{ route('client.register') }}" class="my-4" method="POST"
+                                                enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="form-group mb-3">
                                                     <label for="username" class="form-label">UserName</label>
-                                                    <input class="form-control" name="name" type="text" id="username" placeholder="Enter your Username">
+                                                    <input class="form-control" name="name" type="text"
+                                                        id="username" placeholder="Enter your Username">
                                                 </div>
-                                            
+
                                                 <div class="form-group mb-3">
                                                     <label for="emailaddress" class="form-label">Email Address</label>
-                                                    <input class="form-control" name="email" type="email" id="emailaddress" placeholder="Enter your Email">
+                                                    <input class="form-control" name="email" type="email"
+                                                        id="emailaddress" placeholder="Enter your Email">
                                                 </div>
-                                            
+
                                                 <div class="form-group mb-3">
                                                     <label for="password" class="form-label">Password</label>
-                                                    <input class="form-control" name="password" type="text" id="password" placeholder="Enter your Password">
+                                                    <input class="form-control" name="password" type="text"
+                                                        id="password" placeholder="Enter your Password">
                                                 </div>
 
                                                 <div class="form-group mb-3">
                                                     <label for="password" class="form-label">Confirm Password</label>
-                                                    <input class="form-control" name="password_confirmation" type="text" id="new-password" placeholder="Enter Confirm Password">
+                                                    <input class="form-control" name="password_confirmation"
+                                                        type="text" id="new-password"
+                                                        placeholder="Enter Confirm Password">
                                                 </div>
 
                                                 <div class="form-group mb-3">
                                                     <label for="password" class="form-label">Photo</label>
-                                                    <input class="form-control" type="file" name="photo" id="photo">
+                                                    <input class="form-control" type="file" name="photo"
+                                                        id="photo">
                                                 </div>
-                                            
+
                                                 <div class="form-group mb-3">
                                                     <label for="password" class="form-label">Status</label>
                                                     <select name="status" class="form-control" id="status">
@@ -125,30 +132,35 @@
                                                 <div class="form-group d-flex mb-3">
                                                     <div class="col-12">
                                                         <div class="form-check">
-                                                            <input type="checkbox" class="form-check-input" id="checkbox-signin">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="checkbox-signin">
                                                             <label class="form-check-label" for="checkbox-signin">
-                                                                I agree to the <a href="#" class="text-primary fw-medium">Terms and Conditions</a>
+                                                                I agree to the <a href="#"
+                                                                    class="text-primary fw-medium">Terms and
+                                                                    Conditions</a>
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            
+
                                                 <div class="form-group mb-0 row">
                                                     <div class="col-12">
                                                         <div class="d-grid">
-                                                            <button class="btn btn-primary" type="submit">Register</button>
+                                                            <button class="btn btn-primary"
+                                                                type="submit">Register</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
-                                            
+
                                             <div class="text-center text-muted mb-4">
                                                 <p class="mb-0">
                                                     Already have an account?
-                                                    <a class="text-primary ms-2 fw-medium" href="/client/login">Login here</a>
+                                                    <a class="text-primary ms-2 fw-medium" href="/client/login">Login
+                                                        here</a>
                                                 </p>
                                             </div>
-                                            
+
 
                                         </div>
                                     </div>

@@ -22,7 +22,7 @@
         <div class="page-heading">
             <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
                 <li>
-                    <a href="index.html">
+                    <a href="{{route('home')}}">
                         Home
                     </a>
                 </li>

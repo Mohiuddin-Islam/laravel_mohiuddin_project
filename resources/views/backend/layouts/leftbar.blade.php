@@ -7,18 +7,18 @@
             <div class="logo-box">
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="22">
+                        <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="24">
+                        <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="24">
                     </span>
                 </a>
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="22">
+                        <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{asset('assets/images/black-logo.svg')}}" alt="" height="24">
+                        <img src="{{ asset('assets/images/black-logo.svg') }}" alt="" height="24">
                     </span>
                 </a>
             </div>
@@ -28,12 +28,12 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="{{url('/admin/dashboard')}}">
+                    <a href="{{ url('/admin/dashboard') }}">
                         <i data-feather="home"></i>
                         <span> Dashboard </span>
                         <span class="menu-arrow"></span>
                     </a>
-                    
+
                 </li>
 
                 <li class="menu-title">Car Category</li>
@@ -47,12 +47,12 @@
                     <div class="collapse" id="sidebarAuth">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('carlist.index')}}" class="tp-link">All CarList</a>
+                                <a href="{{ route('carlist.index') }}" class="tp-link">All CarList</a>
                             </li>
                             <li>
-                                <a href="{{route('carlist.create')}}" class="tp-link">New Car</a>
+                                <a href="{{ route('carlist.create') }}" class="tp-link">New Car</a>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </li>
@@ -68,12 +68,12 @@
                     <div class="collapse" id="driv">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('driver.index')}}" class="tp-link">All Driver List</a>
+                                <a href="{{ route('driver.index') }}" class="tp-link">All Driver List</a>
                             </li>
                             <li>
-                                <a href="{{route('driver.create')}}" class="tp-link">New Driver</a>
+                                <a href="{{ route('driver.create') }}" class="tp-link">New Driver</a>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </li>
@@ -89,12 +89,12 @@
                     <div class="collapse" id="book1">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('booking.index')}}" class="tp-link">All Booking List</a>
+                                <a href="{{ route('booking.index') }}" class="tp-link">All Booking List</a>
                             </li>
                             <li>
-                                <a href="{{route('booking.create')}}" class="tp-link">New Booking</a>
+                                <a href="{{ route('booking.create') }}" class="tp-link">New Booking</a>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </li>
@@ -103,8 +103,6 @@
 
         </div>
         <!-- End Sidebar -->
-
-        <div class="clearfix"></div>
-
+        
     </div>
 </div>

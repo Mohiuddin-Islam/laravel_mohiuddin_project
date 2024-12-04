@@ -34,10 +34,7 @@ class RegisterController extends Controller
             'photo' => $request->photo,
             'status' =>$request->status
         ]);
-
-        // Auth::guard('client')->login($client);
-
-        // return redirect(RouteServiceProvider::CLIENT_DASHBOARD);
+        
         return redirect()->route('client.login');
     }
 }
