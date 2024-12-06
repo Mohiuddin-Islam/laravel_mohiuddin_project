@@ -91,6 +91,7 @@
                                 <th>Details</th>
                                 <th>Brand</th>
                                 <th>Model</th>
+                                <th>Driver</th>
                                 <th>Date</th>
                                 <th>Status</th>
                                 <th style="width: 230px">Action</th>
@@ -106,6 +107,7 @@
                                     <td>{{ $item->details }}</td>
                                     <td>{{ $item->car_list->brand }}</td>
                                     <td>{{ $item->car_list->model }}</td>
+                                    <td>{{ $item->driver->name }}</td>
                                     <td>{{ $item->date }}</td>
                                     <td><a href="{{ route('changeStatus', $item->id) }}"
                                     class="{{ $item->status == 'confirm' ? 'btn btn-success' : 'btn btn-warning' }}">{{ $item->status }}</a>

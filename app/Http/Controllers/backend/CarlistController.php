@@ -59,7 +59,7 @@ class CarlistController extends Controller
         $carlist->status = $request->status;
         $carlist->save();
 
-        return redirect()->route('carlist.index')->with('msg', "Car Create Successfully");
+        return redirect()->route('carlist.index')->with('msg', "Car Add Successfully");
     }
 
 

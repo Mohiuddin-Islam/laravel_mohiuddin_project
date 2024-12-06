@@ -35,6 +35,7 @@ class BookingController extends Controller
             'email' => 'required',
             'phone' => 'required',
             'carlist' => 'required',
+            'driver' => 'required',
             'details' => 'max:255|min:10',
         ]);
 
@@ -43,7 +44,8 @@ class BookingController extends Controller
         $app->email = $request->email;
         $app->phone = $request->phone;
         $app->date = $request->date;
-        $app->car_list_id = $request->carlist; // corrected 'car_lists' to 'carlist'
+        $app->car_list_id = $request->carlist;
+        $app->driver_id = $request->driver; // corrected 'car_lists' to 'carlist'
         $app->details = $request->details;
 
         $app->save();

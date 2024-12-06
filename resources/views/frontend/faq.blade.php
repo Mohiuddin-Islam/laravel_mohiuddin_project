@@ -45,7 +45,7 @@
                         </div>
                         <div class="content">
                             <p>Call Anytime</p>
-                            <h6><a href="tel:+923076806860">+ 92 ( 307 ) 68 - 06860</a></h6>
+                            <h6><a href="tel:+923076806860">+88(01567980553)</a></h6>
                         </div>
                     </div>
                 </div>

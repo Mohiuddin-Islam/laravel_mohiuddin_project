@@ -27,6 +27,7 @@ class Booking extends Authenticatable
         'phone',
         'details',
         'car_list_id',
+        'driver_id',
         'date'
     ];
 
@@ -51,6 +52,10 @@ class Booking extends Authenticatable
 
     public function car_list(){
         return $this->BelongsTo(Carlist::class);
+    }
+
+    public function driver(){
+        return $this->BelongsTo(Driver::class);
     }
 
 }

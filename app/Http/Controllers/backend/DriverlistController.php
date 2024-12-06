@@ -33,13 +33,12 @@ class DriverlistController extends Controller
         $driver = new Driver;
 
         $driver->name = $request->name;
-        $driver->car_list_id = $request->carlist;
         $driver->email = $request->email;
         $driver->phone = $request->phone;
         $driver->details = $request->details;
         
         $driver->save();
-        return redirect()->route('driver.index')->with('msg', "Driver Create Successfully");
+        return redirect()->route('driver.index')->with('msg', "Driver Add Successfully");
     }
 
     /**
@@ -64,7 +63,6 @@ class DriverlistController extends Controller
     public function update(Request $request, Driver $driver)
     {
         $driver->name = $request->name;
-        $driver->car_list_id = $request->carlist;
         $driver->email = $request->email;
         $driver->phone = $request->phone;
         $driver->details = $request->details;

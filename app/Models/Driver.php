@@ -26,7 +26,7 @@ class Driver extends Authenticatable
         'email',
         'phone',
         'details',
-        'car_list_id',
+        
     ];
 
     /**
@@ -48,8 +48,8 @@ class Driver extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function carlist(){
-        return $this->BelongsTo(Carlist::class);
+    public function booking(){
+        return $this->hasMany(Booking::class);
     }
 
 }

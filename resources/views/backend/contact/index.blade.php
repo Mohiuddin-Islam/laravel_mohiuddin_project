@@ -65,8 +65,8 @@
 <!-- App js-->
 <script src="{{asset('assets/js/app.js')}}"></script>
 @endsection
-@section('content')
 
+@section('content')
 
 <div class="row">
     <div class="col-lg-12">

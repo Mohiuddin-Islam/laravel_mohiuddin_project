@@ -9,17 +9,17 @@
                         </div>
                         <div class="footer-content">
                             <p>
-                                66 Road Broklyn Golden Street, 600
-                                New York, USA 
+                                54 Paltan, Inner Circular Road <br>
+                                Dhaka 
                             </p>
                             <ul class="contact-info">
                                 <li>
                                     <i class="fa-regular fa-envelope"></i>
-                                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                    <a href="mailto:needhelp@company.com">remons@gmail.com</a>
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-phone-volume"></i>
-                                    <a href="tel:926668880000">+92 (666) 888 0000</a>
+                                    <a href="tel:926668880000">+88(01567980553)</a>
                                 </li>
                             </ul>
                         </div>
@@ -32,27 +32,27 @@
                         </div>
                         <ul class="list-items">
                             <li>
-                                <a href="about.html"> 
+                                <a href="{{route('about')}}"> 
                                     About Us
                                 </a>
                             </li>
                             <li>
-                                <a href="car-details.html">
+                                <a href="{{route('car')}}">
                                     New Cars
                                 </a>
                             </li>
                             <li>
-                                <a href="news-details.html">
+                                <a href="{{route('car_details')}}">
                                     Latest News
                                 </a>
                             </li>
                             <li>
-                                <a href="gallery.html">
+                                <a href="{{route('gallery')}}">
                                     Gallery
                                 </a>
                             </li>
                             <li>
-                                <a href="contact.html">
+                                <a href="{{route('contact_us')}}">
                                     Contact
                                 </a>
                             </li>

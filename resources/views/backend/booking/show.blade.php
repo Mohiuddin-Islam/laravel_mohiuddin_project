@@ -39,31 +39,31 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Name:</strong>
                 {{ $booking->name }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Email:</strong>
                 {{ $booking->email }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Phone:</strong>
                 {{ $booking->phone}}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Details:</strong>
                 {{ $booking->details }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-8 d-flex align-items-center justify-content-center display-6">
+        <div class="col-xs-12 col-sm-12 col-md-12 d-flex align-items-center justify-content-center display-6">
             <div class="form-group">
                 <strong>Date:</strong>
                 {{ $booking->date }}

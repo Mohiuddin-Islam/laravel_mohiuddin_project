@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
 use App\Models\CarList;
+use App\Models\Driver;
 use Illuminate\Http\Request;
 
 class BookinglistController extends Controller
@@ -24,7 +25,8 @@ class BookinglistController extends Controller
     public function create()
     {
         $carlists = CarList::all();
-        return view('backend.booking.create',compact('carlists'));
+        $drivers = Driver::all();
+        return view('backend.booking.create',compact('carlists','drivers'));
     }
 
     /**
@@ -35,6 +37,7 @@ class BookinglistController extends Controller
         $request->validate([
             'name' => 'required',
             'carlist' => 'required',
+            'driver' => 'required',
             'email' => 'required',
             'phone' => 'required',
             'date' =>'required',
@@ -45,6 +48,7 @@ class BookinglistController extends Controller
 
         $booking->name = $request->name;
         $booking->car_list_id = $request->carlist;
+        $booking->driver_id = $request->driver;
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->details = $request->details;
@@ -76,9 +80,19 @@ class BookinglistController extends Controller
     public function update(Request $request, Booking $booking)
     {
         
+        $request->validate([
+            'name' => 'required',
+            'carlist' => 'required',
+            'driver' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'date' =>'required',
+            'details' => 'max:255|min:10',
+        ]);
 
         $booking->name = $request->name;
         $booking->car_list_id = $request->carlist;
+        $booking->driver_id = $request->driver;
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->details = $request->details;

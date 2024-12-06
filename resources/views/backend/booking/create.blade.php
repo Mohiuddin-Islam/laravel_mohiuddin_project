@@ -66,6 +66,18 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputEngine" class="form-label">Driver</label>
+                            <select name="driver" class="form-control" class="category" id="exampleInputEmail1"
+                                aria-describedby="engineHelp">
+                                <option value="">Choose Driver</option>
+                                @foreach ($drivers as $driver)
+                                    <option value="{{ $driver->id }}" @selected(old('driver') == $driver->id)>
+                                        {{ $driver->name }}</option>
+                                @endforeach
+                                
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputPrice" class="form-label">Details</label>
                             <textarea type="text" name="details" class="form-control" id="exampleInputEmail1" aria-describedby="priceHelp"
                                 placeholder="Enter Details Here" rows="5"></textarea>

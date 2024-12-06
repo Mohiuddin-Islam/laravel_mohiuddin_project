@@ -31,7 +31,7 @@
                     <div class="col-lg-12">
                         <div class="car-details-items">
                             <div class="car-image">
-                                <img src="{{asset('assets/img/car/bmw_i8.png')}}" alt="img">
+                                <img src="{{asset('assets/img/car/honda_crv.png')}}" alt="img">
                             </div>
                             <div class="car-content">
                                 <div class="star">
@@ -128,7 +128,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="price-table-area">
+                                {{-- <div class="price-table-area">
                                     <h6>Table Price <span>( by day of the week )</span></h6>
                                     <div class="price-table-items section-bg">
                                         <p>Monday</p>
@@ -158,7 +158,7 @@
                                         <p>Sunday</p>
                                         <p>$70.00</p>
                                     </div>
-                                </div>
+                                </div> --}}
                                 
                             </div>
                         </div>
