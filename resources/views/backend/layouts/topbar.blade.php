@@ -156,7 +156,8 @@
                     <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <img src="{{asset('assets/images/users/user-5.jpg')}}" alt="user-image" class="rounded-circle">
                         <span class="pro-user-name ms-1">
-                            {{Auth()->guard()->user()->name}} <i class="mdi mdi-chevron-down"></i> 
+                            {{-- {{Auth()->guard()->user()->name}} --}}
+                            <i class="mdi mdi-chevron-down"></i> 
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end profile-dropdown ">

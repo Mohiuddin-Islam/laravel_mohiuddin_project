@@ -28,7 +28,7 @@
         <div class="container">
             <div class="car-details-wrapper">
                 <div class="row g-5">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <div class="car-details-items">
                             <div class="car-image">
                                 <img src="{{asset('assets/img/car/bmw_i8.png')}}" alt="img">
@@ -251,7 +251,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4">
+                    {{-- <div class="col-lg-4">
                         <div class="car-list-sidebar">
                             <h4 class="title">Booking Form</h4>
                             <form action="#" id="contact-form2" method="POST" class="contact-form-items">
@@ -361,7 +361,7 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

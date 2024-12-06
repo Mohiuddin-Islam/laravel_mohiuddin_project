@@ -35,8 +35,12 @@
                             <h2 class="wow fadeInUp" data-wow-delay=".4s">
                                 Drop us a Line
                             </h2>
+                            @if (session('msg'))
+                            <div class="alert alert-success">{{ session('msg') }}</div>
+                        @endif
                         </div>
-                        <form action="#" id="contact-form" method="POST" class="contact-form-items mt-5 mt-md-0">
+                        <form action="{{route('contact.store')}}" id="contact-form" method="POST" class="contact-form-items mt-5 mt-md-0">
+                            @csrf
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="form-clt">
@@ -60,7 +64,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-clt">
-                                        <textarea name="message" id="message" placeholder="Write a Comment"></textarea>
+                                        <textarea name="details" id="message" placeholder="Write a Comment"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">

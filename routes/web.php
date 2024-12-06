@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\backend\BookinglistController;
 use App\Http\Controllers\backend\CarlistController;
-use App\Http\Controllers\backend\ClientlistController;
 use App\Http\Controllers\backend\DriverlistController;
 use App\Http\Controllers\frontend\BookingController;
+use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +27,7 @@ Route::view('/about', 'frontend.about')->name('about');
 Route::view('/gallery', 'frontend.gallery')->name('gallery');
 Route::view('/faq', 'frontend.faq')->name('faq');
 Route::view('/booking', 'frontend.booking')->name('booking');
-Route::view('/contact', 'frontend.contact')->name('contact');
+Route::view('/contact_us', 'frontend.contact_us')->name('contact_us');
 Route::view('/blog', 'frontend.blog')->name('blog');
 Route::view('/blog_details', 'frontend.blog_details')->name('blog_details');
 Route::view('/car', 'frontend.car')->name('car');
@@ -40,6 +40,11 @@ Route::view('/car_details', 'frontend.car_details')->name('car_details');
 
 Route::get('/booking', [BookingController::class,'create'])->name('book.create');
 Route::post('/booking', [BookingController::class,'store'])->name('book.store');
+
+//Contact Us Route
+
+Route::resource('/contact', ContactController::class);
+
 
 //Admin Dashboard
 
@@ -76,7 +81,6 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::resource('/driver', DriverlistController::class);
     Route::resource('/booking', BookinglistController::class);
     Route::get('/booking/status/{id}',[BookinglistController::class,'changeStatus'])->name('changeStatus');
-
 
 
 });

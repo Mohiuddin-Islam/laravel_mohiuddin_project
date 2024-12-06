@@ -73,7 +73,7 @@
         <div class="card">
             <div class="card-header">
                 <h5 class="card-title mb-0" style="color:black">All DriverList</h5>
-                <a class="btn btn-warning mt-2" href="{{ route('driver.create') }}"> Create New Driver</a>
+                <a class="btn btn-warning mt-2" href="{{ route('driver.create') }}"> Add New Driver</a>
                 @if (session('msg'))
                     <div class="alert alert-success mt-2">{{ session('msg') }}</div>
                         @endif

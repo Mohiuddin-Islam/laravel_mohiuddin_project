@@ -84,7 +84,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{route('contact')}}">Contact</a>
+                                            <a href="{{route('contact_us')}}">Contact</a>
                                         </li>
                                     </ul>
                                 </nav>

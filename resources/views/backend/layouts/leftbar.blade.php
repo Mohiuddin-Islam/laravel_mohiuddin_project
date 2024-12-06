@@ -99,8 +99,27 @@
                     </div>
                 </li>
 
-            </ul>
+                <li class="menu-title">Contact Information</li>
 
+                <li>
+                    <a href="#cont" data-bs-toggle="collapse">
+                        <i data-feather="users"></i>
+                        <span>Contact</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="cont">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('contact.index') }}" class="tp-link">All Contact List</a>
+                            </li>
+                            <li>
+                                {{-- <a href="{{ route('contact.create') }}" class="tp-link">New Contact</a> --}}
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         <!-- End Sidebar -->
         
