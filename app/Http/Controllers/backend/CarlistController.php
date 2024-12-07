@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Carlist;
+use App\Models\CarList;
 use Illuminate\Http\Request;
 
 class CarlistController extends Controller
@@ -13,7 +13,7 @@ class CarlistController extends Controller
      */
     public function index()
     {
-        $items = Carlist::orderBy('id', 'desc')->get();
+        $items = CarList::orderBy('id', 'desc')->get();
         return view('backend.carlist.index', compact('items'));
     }
 
@@ -49,7 +49,7 @@ class CarlistController extends Controller
             $photo = 'images/nophoto.png';
         }
 
-        $carlist = new Carlist();
+        $carlist = new CarList();
 
         $carlist->brand = $request->brand;
         $carlist->model = $request->model;
@@ -66,7 +66,7 @@ class CarlistController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Carlist $carlist)
+    public function show(CarList $carlist)
     {
         return view('backend.carlist.show', compact("carlist"));
     }
@@ -74,7 +74,7 @@ class CarlistController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Carlist $carlist)
+    public function edit(CarList $carlist)
     {
         return view('backend.carlist.edit', compact('carlist'));
     }
@@ -82,7 +82,7 @@ class CarlistController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Carlist $carlist)
+    public function update(Request $request, CarList $carlist)
     {
 
         $request->validate([
@@ -117,7 +117,7 @@ class CarlistController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Carlist $carlist)
+    public function destroy(CarList $carlist)
     {
         $carlist->delete();
 

@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                {{-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                     <div class="car-rentals-items mt-0">
                         <div class="car-image">
                             <img src="assets/img/car/06.webp" alt="img">
@@ -297,7 +297,7 @@
                             <a href="car-details.html" class="theme-btn bg-color w-100 text-center">book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
