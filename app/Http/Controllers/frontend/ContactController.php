@@ -34,7 +34,7 @@ class ContactController extends Controller
 
         $contact->name = $request->name;
         $contact->email = $request->email;
-        $contact->subject = $request->email;
+        $contact->subject = $request->subject;
         $contact->phone = $request->phone;
         $contact->details = $request->details;
         
