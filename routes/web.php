@@ -103,3 +103,21 @@ Route::middleware('auth:client')->prefix('client')->group( function () {
     Route::view('/dashboard','backend.client_dashboard');
     
 });
+
+
+//Customer Login Route
+
+Route::middleware('guest:customer')->prefix('customer')->group(function () {
+    Route::get('login', [App\Http\Controllers\Auth\Customer\LoginController::class, 'login'])->name('customer.login');
+    Route::post('login', [App\Http\Controllers\Auth\Customer\LoginController::class, 'check_user']);
+    Route::get('register', [App\Http\Controllers\Auth\Customer\RegisterController::class, 'register'])->name('customer.register');
+    Route::post('register', [App\Http\Controllers\Auth\Customer\RegisterController::class, 'check_user']);
+});
+
+
+Route::middleware('auth:customer')->prefix('customer')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Customer\LoginController::class, 'logout'])->name('customer.logout');
+    Route::view('/dashboard','frontend.customer_dashboard');
+
+});

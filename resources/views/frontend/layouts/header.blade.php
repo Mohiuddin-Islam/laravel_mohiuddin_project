@@ -14,9 +14,14 @@
                 </ul>
                 <div class="header-top-right">
                     <ul class="top-list">
-                        <li><a href="contact.html">Help</a></li>
-                        <li><a href="contact.html">Support</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{{route('customer.login')}}" style="color:rgb(18, 172, 18)">Login</a></li>
+                        <li><a href="{{route('customer.register')}}" style="color:rgb(38, 143, 204)">Registration</a></li>
+                        {{-- <li><a href="{{route('customer.logout')}}">LogOut</a></li> --}}
+                        <form action="{{route('customer.logout')}}" method="post">
+                            @csrf
+                            <button type="submit" class="dropdown-item notify-item" style="font-size:15px;color:rgb(235, 24, 24)"><i class="mdi mdi-location-exit fs-16 align-middle"></i>
+                                <span>Logout</span></button>
+                    </form>
                     </ul>
                     <div class="social-icon d-flex align-items-center">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
