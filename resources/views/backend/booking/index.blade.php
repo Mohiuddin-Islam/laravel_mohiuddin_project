@@ -91,6 +91,7 @@
                                 <th>Details</th>
                                 <th>Brand</th>
                                 <th>Model</th>
+                                <th>Price</th>
                                 <th>Driver</th>
                                 <th>Date</th>
                                 <th>Status</th>
@@ -107,6 +108,7 @@
                                     <td>{{ $item->details }}</td>
                                     <td>{{ $item->car_list->brand }}</td>
                                     <td>{{ $item->car_list->model }}</td>
+                                    <td>{{ $item->car_list->price_per_day }}</td>
                                     <td>{{ $item->driver->name }}</td>
                                     <td>{{ $item->date }}</td>
                                     <td><a href="{{ route('changeStatus', $item->id) }}"
