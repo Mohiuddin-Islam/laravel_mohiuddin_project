@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 //Frontend Side Route
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/car', [HomeController::class,'car_show'])->name('car');
 Route::view('/about', 'frontend.about')->name('about');
 Route::view('/gallery', 'frontend.gallery')->name('gallery');
 Route::view('/faq', 'frontend.faq')->name('faq');
@@ -30,7 +31,7 @@ Route::view('/booking', 'frontend.booking')->name('booking');
 Route::view('/contact_us', 'frontend.contact_us')->name('contact_us');
 Route::view('/blog', 'frontend.blog')->name('blog');
 Route::view('/blog_details', 'frontend.blog_details')->name('blog_details');
-Route::view('/car', 'frontend.car')->name('car');
+// Route::view('/car', 'frontend.car')->name('car')->name('car');
 Route::view('/car_sidebar', 'frontend.car_sidebar')->name('car_sidebar');
 Route::view('/car_details', 'frontend.car_details')->name('car_details');
 
@@ -118,6 +119,8 @@ Route::middleware('guest:customer')->prefix('customer')->group(function () {
 Route::middleware('auth:customer')->prefix('customer')->group( function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Customer\LoginController::class, 'logout'])->name('customer.logout');
-    Route::view('/dashboard','frontend.customer_dashboard');
+    //Route::view('/dashboard','frontend.customer_dashboard');
 
 });
+
+//Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'logout'])->name('admin.logout');

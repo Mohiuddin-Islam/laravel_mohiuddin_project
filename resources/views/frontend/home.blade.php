@@ -175,7 +175,7 @@
                                     <i class="fa-solid fa-star"></i>
                                     <span>2 Reviews</span>
                                 </div>
-                                <h4><a href="car-details.html">{{ $carlist->brand }}</a></h4>
+                                <h4><a href="#">{{ $carlist->brand }}</a></h4>
                                 <h6>{{ $carlist->price_per_day }} <span>/ Day</span></h6>
                                 <div class="icon-items">
                                     <ul>

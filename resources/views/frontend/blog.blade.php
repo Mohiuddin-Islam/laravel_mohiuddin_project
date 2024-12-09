@@ -44,8 +44,8 @@
                             </div>
                             <div class="news-cont">
                                 <span>by Mike Hardson</span>
-                                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+                                <h3><a href="{{route('blog_details')}}">The best fastest and most powerful road car</a></h3>
+                                <p>Now in its second year of production, the S650 Mustang GT has established itself... </p>
                             </div>
                             <ul>
                                 <li>
@@ -53,7 +53,7 @@
                                     2 Comments
                                 </li>
                                 <li>
-                                    <a href="news-details.html">
+                                    <a href="{{route('blog_details')}}">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                         More
                                     </a>
@@ -79,8 +79,8 @@
                             </div>
                             <div class="news-cont">
                                 <span>by Mike Hardson</span>
-                                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+                                <h3><a href="{{route('blog_details')}}">2025 Corvette Stingray | 490 HP </a></h3>
+                                <p>For decades, going all the way back to Zora Arkus-Duntov’s involvement,</p>
                             </div>
                             <ul>
                                 <li>
@@ -88,7 +88,7 @@
                                     2 Comments
                                 </li>
                                 <li>
-                                    <a href="news-details.html">
+                                    <a href="{{route('blog_details')}}">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                         More
                                     </a>
@@ -114,8 +114,8 @@
                             </div>
                             <div class="news-cont">
                                 <span>by Mike Hardson</span>
-                                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+                                <h3><a href="{{route('blog_details')}}">2025 Mustang Dark Horse | 500 HP</a></h3>
+                                <p>The Dark Horse Mustang carries an additional $18,000 premium over the base Mustang GT, and </p>
                             </div>
                             <ul>
                                 <li>
@@ -123,7 +123,7 @@
                                     2 Comments
                                 </li>
                                 <li>
-                                    <a href="news-details.html">
+                                    <a href="{{route('blog_details')}}">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                         More
                                     </a>
@@ -149,8 +149,8 @@
                             </div>
                             <div class="news-cont">
                                 <span>by Mike Hardson</span>
-                                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+                                <h3><a href="{{route('blog_details')}}">25 Most Powerful Cars In the World</a></h3>
+                                <p>Whether they're electric, gas, or both—these performance cars in the world</p>
                             </div>
                             <ul>
                                 <li>
@@ -158,7 +158,7 @@
                                     2 Comments
                                 </li>
                                 <li>
-                                    <a href="news-details.html">
+                                    <a href="{{route('blog_details')}}">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                         More
                                     </a>
@@ -184,8 +184,8 @@
                             </div>
                             <div class="news-cont">
                                 <span>by Mike Hardson</span>
-                                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+                                <h3><a href="{{route('blog_details')}}">The Coolest Hot Hatch in the World Has a Ferrari</a></h3>
+                                <p>This funky hatchback is a one-off creation called the Sbarro Super</p>
                             </div>
                             <ul>
                                 <li>
@@ -193,7 +193,7 @@
                                     2 Comments
                                 </li>
                                 <li>
-                                    <a href="news-details.html">
+                                    <a href="{{route('blog_details')}}">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                         More
                                     </a>
@@ -219,8 +219,8 @@
                             </div>
                             <div class="news-cont">
                                 <span>by Mike Hardson</span>
-                                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+                                <h3><a href="{{route('blog_details')}}">You Can Now Build Your Own Rolls-Royce at Home</a></h3>
+                                <p>The Cameo has self-leveling Rolls-Royce center caps, just like the</p>
                             </div>
                             <ul>
                                 <li>
@@ -228,7 +228,7 @@
                                     2 Comments
                                 </li>
                                 <li>
-                                    <a href="news-details.html">
+                                    <a href="{{route('blog_details')}}">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                         More
                                     </a>

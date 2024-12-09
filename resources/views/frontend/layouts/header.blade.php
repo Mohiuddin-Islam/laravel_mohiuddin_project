@@ -69,14 +69,8 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{route('car')}}">
-                                                CarList
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="{{route('car_sidebar')}}">Car Sidebar</a></li>
-                                                <li><a href="{{route('car_details')}}">Car Details</a></li>
-                                            </ul>
+                                            <a href="{{route('car')}}">CarList</a>
+                                            
                                         </li>
                                         <li>
                                             <a href="{{route('blog')}}">

@@ -48,32 +48,21 @@
                                 </ul>
                                 <h3>The best fastest and most powerful road car</h3>
                                 <p class="mt-3">
-                                    Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many
-                                    variations of passages of Lorem Ipsum available, but the majority have alteration in
-                                    some injected or words which don't look even slightly believable. If you are going to
-                                    use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrang hidden
-                                    in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
-                                    predefined chunks as necessary, making this the first true generator on the Internet. It
-                                    uses a dictionary of over 200 Latin words, combined with a handful of model sentence
-                                    structures, to generate Lorem Ipsum which looks reasonable.
+                                    Now in its second year of production, the S650 Mustang GT has established itself as the most affordable of the V-8 muscle cars as well as one of the most powerful muscle cars. The fastback Mustang GT is an absolute bargain with its fourth-generation 5.0-liter Coyote V-8. Output now sits at 486 hp, allowing the sole remaining American front-engine V-8 coupe to propel the 3,800-lb missile from 0 to 60 mph in about 4 seconds. With a base price of just $42,860, that’s a lot of performance for the money, and for the foreseeable future it’s unlikely that any competitor in the V-8 muscle car arena is going to break into that segment, let alone beat it. The “why” is perhaps the biggest story here. Ford is the only domestic manufacturer with enough economical four-cylinders, hybrids, and EVs to be able to support the profitable production of an everyman’s V-8 coupe without having to pay enormous EPA fines behind the scenes. Ford saw this coming, made the decision that Mustang was important, and took steps to preserve the one of the highest-horsepower cars at a price we could all afford. If we’re completely honest with ourselves, the Mustang GT (and Dark Horse) really is the only true remaining American V-8 muscle car—the others are technically near misses due to either their price, configuration, or limited availability. 
                                 </p>
                                 <p class="mt-4">
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type simen book. It has
-                                    survived not only five centuries, but also the leap into electronic typesetting.
+                                    t’s been a minute since we updated our list of highest horsepower muscle cars for hot-rodders. A lot has changed: GM no longer offers any V-8 muscle cars in the traditional sense, as the Chevy Camaro is now gone.
                                 </p>
                                 <p class="mt-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. orem Ipsum
-                                    has been the industry's standard dummy text ever since the when an unknown printer took
-                                    a galley of type and scrambled it to make a type specimen book.
+                                    That, of course, doesn’t mean GM fans stop buying GM cars, they will simply need to choose from the Corvette or the Cadillac CT5-V Blackwing sedan. At Dodge, the Challenger and Charger are gone, along with the Hemi V-8s that powered them.
                                 </p>
                             </div>
                         </div>
                         <div class="tag-share-wrap mt-4 mb-4">
                             <div class="tagcloud">
                                 <span>Tags</span>
-                                <a href="news-details.html">Off Road</a>
-                                <a href="news-details.html">Luxury</a>
+                                <a href="{{route('blog_details')}}">Off Road</a>
+                                <a href="{{route('blog_details')}}">Luxury</a>
                             </div>
                             <div class="social-share d-flex align-items-center">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -109,7 +98,7 @@
                                         <div class="con">
                                             <h4>Kevin Martin</h4>
                                         </div>
-                                        <a href="news-details.html" class="reply">Reply</a>
+                                        <a href="{{route('blog_details')}}" class="reply">Reply</a>
                                     </div>
                                     <p class="mt-4">
                                         It has survived not only five centuries, but also the leap into electronic
@@ -127,7 +116,7 @@
                                         <div class="con">
                                             <h4>Sarah Albert</h4>
                                         </div>
-                                        <a href="news-details.html" class="reply">Reply</a>
+                                        <a href="{{route('blog_details')}}" class="reply">Reply</a>
                                     </div>
                                     <p class="mt-4">
                                         It has survived not only five centuries, but also the leap into electronic
@@ -190,7 +179,7 @@
                                                 </li>
                                             </ul>
                                             <h6>
-                                                <a href="news-details.html">
+                                                <a href="{{route('blog_details')}}">
                                                     Hassle-free Rental
                                                     Experience
                                                 </a>
@@ -209,7 +198,7 @@
                                                 </li>
                                             </ul>
                                             <h6>
-                                                <a href="news-details.html">
+                                                <a href="{{route('blog_details')}}">
                                                     Hassle-free Rental
                                                     Experience
                                                 </a>
@@ -228,7 +217,7 @@
                                                 </li>
                                             </ul>
                                             <h6>
-                                                <a href="news-details.html">
+                                                <a href="{{route('blog_details')}}">
                                                     Hassle-free Rental
                                                     Experience
                                                 </a>
@@ -243,15 +232,15 @@
                                 </div>
                                 <div class="news-widget-categories">
                                     <ul>
-                                        <li><a href="news-details.html">Rental <i
+                                        <li><a href="{{route('blog_details')}}">Rental <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="news-details.html">Luxury Cars <i
+                                        <li><a href="{{route('blog_details')}}">Luxury Cars <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li class="active"><a href="news-details.html">Dream Cars <i
+                                        <li class="active"><a href="{{route('blog_details')}}">Dream Cars <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="news-details.html">Dream Cars <i
+                                        <li><a href="{{route('blog_details')}}">Dream Cars <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
-                                        <li><a href="news-details.html">Off Road <i
+                                        <li><a href="{{route('blog_details')}}">Off Road <i
                                                     class="fa-solid fa-arrow-right-long"></i></a></li>
                                     </ul>
                                 </div>
@@ -263,10 +252,10 @@
                                 <div class="news-widget-categories">
                                     <div class="tagcloud">
                                         <a href="news-standard.html">Off Road</a>
-                                        <a href="news-details.html">Luxury</a>
-                                        <a href="news-details.html">Cars</a>
-                                        <a href="news-details.html">Rentals</a>
-                                        <a href="news-details.html">Engine</a>
+                                        <a href="{{route('blog_details')}}">Luxury</a>
+                                        <a href="{{route('blog_details')}}">Cars</a>
+                                        <a href="{{route('blog_details')}}">Rentals</a>
+                                        <a href="{{route('blog_details')}}">Engine</a>
                                     </div>
                                 </div>
                             </div>
