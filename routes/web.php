@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\Customer\LoginController;
 use App\Http\Controllers\backend\BookinglistController;
 use App\Http\Controllers\backend\CarlistController;
 use App\Http\Controllers\backend\DriverlistController;
@@ -31,7 +32,6 @@ Route::view('/booking', 'frontend.booking')->name('booking');
 Route::view('/contact_us', 'frontend.contact_us')->name('contact_us');
 Route::view('/blog', 'frontend.blog')->name('blog');
 Route::view('/blog_details', 'frontend.blog_details')->name('blog_details');
-// Route::view('/car', 'frontend.car')->name('car')->name('car');
 Route::view('/car_sidebar', 'frontend.car_sidebar')->name('car_sidebar');
 Route::view('/car_details', 'frontend.car_details')->name('car_details');
 
@@ -122,5 +122,3 @@ Route::middleware('auth:customer')->prefix('customer')->group( function () {
     //Route::view('/dashboard','frontend.customer_dashboard');
 
 });
-
-//Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'logout'])->name('admin.logout');

@@ -14,14 +14,20 @@
                 </ul>
                 <div class="header-top-right">
                     <ul class="top-list">
-                        <li><a href="{{route('customer.login')}}" style="color:rgb(18, 172, 18)">Login</a></li>
-                        <li><a href="{{route('customer.register')}}" style="color:rgb(38, 143, 204)">Registration</a></li>
+                        <li><a href="{{ route('customer.login') }}" style="color:rgb(18, 172, 18)">Login</a></li>
+                        <li><a href="{{ route('customer.register') }}" style="color:rgb(38, 143, 204)">Registration</a>
+                        </li>
                         {{-- <li><a href="{{route('customer.logout')}}">LogOut</a></li> --}}
-                        <form action="{{route('customer.logout')}}" method="post">
-                            @csrf
-                            <button type="submit" class="dropdown-item notify-item" style="font-size:15px;color:rgb(235, 24, 24)"><i class="mdi mdi-location-exit fs-16 align-middle"></i>
-                                <span>Logout</span></button>
-                    </form>
+                        <li>
+                            <form action="{{ route('customer.logout') }}" method="post">
+                                @csrf
+                                <a href="{{ route('customer.logout') }}"
+                                    onclick="event.preventDefault();
+                                    this.closest('form').submit();" style="color:rgb(235, 24, 24)">
+                                    LogOut
+                                </a>
+                            </form>
+                        </li>
                     </ul>
                     <div class="social-icon d-flex align-items-center">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -51,39 +57,39 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li class="has-dropdown active menu-thumb">
-                                            <a href="{{route('home')}}">
-                                            Home </a>
-                                            
+                                            <a href="{{ route('home') }}">
+                                                Home </a>
+
                                         </li>
                                         <li>
-                                            <a href="{{route('about')}}">About Us</a>
+                                            <a href="{{ route('about') }}">About Us</a>
                                         </li>
                                         <li class="has-dropdown">
-                                            <a href="{{route('gallery')}}">
+                                            <a href="{{ route('gallery') }}">
                                                 Feature
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="{{route('gallery')}}">Gallery</a></li>
-                                                <li><a href="{{route('faq')}}">Faq's</a></li>
+                                                <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                                                <li><a href="{{ route('faq') }}">Faq's</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{route('car')}}">CarList</a>
-                                            
+                                            <a href="{{ route('car') }}">CarList</a>
+
                                         </li>
                                         <li>
-                                            <a href="{{route('blog')}}">
+                                            <a href="{{ route('blog') }}">
                                                 Blog
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                
-                                                <li><a href="{{route('blog_details')}}">Blog Details</a></li>
+
+                                                <li><a href="{{ route('blog_details') }}">Blog Details</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{route('contact_us')}}">Contact</a>
+                                            <a href="{{ route('contact_us') }}">Contact</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -100,9 +106,10 @@
                                 <h6><a href="tel:+9288009850">+92 (8800) - 9850</a></h6>
                             </div>
                         </div>
-                        <a href="#0" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
+                        <a href="#0" class="search-trigger search-icon"><i
+                                class="fa-regular fa-magnifying-glass"></i></a>
                         <div class="header-button">
-                            <a href="{{route('book.create')}}" class="theme-btn">
+                            <a href="{{ route('book.create') }}" class="theme-btn">
                                 Book a Car
                             </a>
                         </div>

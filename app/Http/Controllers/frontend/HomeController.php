@@ -18,4 +18,5 @@ class HomeController extends Controller
         $carlists = CarList::all();
         return view('frontend.car',compact('carlists'));
     }
+
 }

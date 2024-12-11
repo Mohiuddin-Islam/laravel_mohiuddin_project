@@ -81,7 +81,7 @@
                                         Generators on the to repeatY
                                     </li>
                                 </ul>
-                                <a href="about.html" class="theme-btn">Discover More</a>
+                                <a href="#" class="theme-btn">Discover More</a>
                             </div>
                             <div class="author-items wow fadeInUp" data-wow-delay=".5s">
                                 <div class="icon">
@@ -119,7 +119,7 @@
                         <img src="{{asset('assets/img/team/team-01.webp')}}" alt="team-img">
                     </div>
                     <div class="team-content">
-                        <h3><a href="about.html">Mike Hardson</a></h3>
+                        <h3><a href="#">Mike Hardson</a></h3>
                         <p>manager</p>
                         <div class="social-icon d-flex align-items-center justify-content-center">
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -139,7 +139,7 @@
                         <img src="{{asset('assets/img/team/team-02.webp')}}" alt="team-img">
                     </div>
                     <div class="team-content">
-                        <h3><a href="about.html">Aleesha Brown</a></h3>
+                        <h3><a href="#">Aleesha Brown</a></h3>
                         <p>manager</p>
                         <div class="social-icon d-flex align-items-center justify-content-center">
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -159,7 +159,7 @@
                         <img src="{{asset('assets/img/team/team-03.webp')}}" alt="team-img">
                     </div>
                     <div class="team-content">
-                        <h3><a href="about.html">David Jhonson</a></h3>
+                        <h3><a href="#">David Jhonson</a></h3>
                         <p>manager</p>
                         <div class="social-icon d-flex align-items-center justify-content-center">
                             <a href="#"><i class="fab fa-twitter"></i></a>
