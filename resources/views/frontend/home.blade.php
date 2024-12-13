@@ -32,8 +32,7 @@
                                 </h2>
                             </div>
                             <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".6s">
-                                Lorem ipsum is simply ipun txns mane so dummy text of free <br> available in market the
-                                printing and typesetting industry has <br> been the industry's standard dummy text ever.
+                                Automotive companies have a unique opportunity to leverage social media for storytelling, showcasing innovation, and building a passionate community of enthusiasts and customers. The dynamic and visually driven nature of the automotive industry makes it a perfect fit for engaging content on social media. Here are bespoke social media tips for automotive companies, enriched with creative social media ideas designed to turbocharge your brand’s online presence.
                             </p>
                             <div class="icon-area">
                                 <div class="icon-items wow fadeInUp" data-wow-delay=".3s">

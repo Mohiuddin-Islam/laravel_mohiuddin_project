@@ -3,10 +3,18 @@
         <div class="container-fluid">
             <div class="header-top-wrapper style-2">
                 <ul class="contact-list">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@example.com" class="link">remons@gmail.com</a>
-                    </li>
+                    @if (Auth::check())
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@example.com" class="link">{{ Auth::user()->name }}</a>
+                        </li>
+                    @else
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@example.com" class="link">Guest</a>
+                            
+                        </li>
+                    @endif
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
                         54 Inner Circular Road, Purana Paltan. Dhaka-Bangladesh
@@ -14,8 +22,8 @@
                 </ul>
                 <div class="header-top-right">
                     <ul class="top-list">
-                        <li><a href="{{ route('customer.login') }}" style="color:rgb(18, 172, 18)">Login</a></li>
-                        <li><a href="{{ route('customer.register') }}" style="color:rgb(38, 143, 204)">Registration</a>
+                        <li><a href="{{ route('customer.login') }}" style="color:rgb(27, 184, 27)">Login</a></li>
+                        <li><a href="{{ route('customer.register') }}" style="color:rgb(44, 150, 211)">Registration</a>
                         </li>
                         {{-- <li><a href="{{route('customer.logout')}}">LogOut</a></li> --}}
                         <li>
@@ -23,7 +31,8 @@
                                 @csrf
                                 <a href="{{ route('customer.logout') }}"
                                     onclick="event.preventDefault();
-                                    this.closest('form').submit();" style="color:rgb(235, 24, 24)">
+                                    this.closest('form').submit();"
+                                    style="color:rgb(235, 24, 24)">
                                     LogOut
                                 </a>
                             </form>
@@ -45,10 +54,10 @@
                 <div class="header-main">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="index.html" class="header-logo-1">
+                            <a href="#" class="header-logo-1">
                                 <img src="assets/img/logo/white-logo-2.svg" alt="logo-img">
                             </a>
-                            <a href="index.html" class="header-logo-2">
+                            <a href="#" class="header-logo-2">
                                 <img src="assets/img/logo/black-logo.svg" alt="logo-img">
                             </a>
                         </div>

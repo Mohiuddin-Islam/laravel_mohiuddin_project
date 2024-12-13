@@ -42,7 +42,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{route('car_details')}}">
+                                <a href="{{route('blog')}}">
                                     Latest News
                                 </a>
                             </li>
